@@ -40,6 +40,11 @@ public class Cutscenes : MonoBehaviour
     public AudioClip grandmother2;
     public AudioClip grandmother3;
 
+    void Start()
+    {
+        audioSource = GetComponent<AudioSource>();
+    }
+
     public void StartGame()
     {
         StartCoroutine(Dialogue(mother1));

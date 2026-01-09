@@ -29,6 +29,9 @@ public class DialogueManager : MonoBehaviour
     private int lumberjackWaypointIndex;
     private int grandmotherWaypointIndex;
 
+    [Header("UI")]
+    public GameObject mainMenu;
+
     [Header("Mother")]
     public Transform mother;
     public Animator motherAnim;
@@ -55,6 +58,8 @@ public class DialogueManager : MonoBehaviour
         wolfAnim = GetComponentInChildren<Animator>();
         lumberjackAnim = GetComponentInChildren<Animator>();
         grandmotherAnim = GetComponentInChildren<Animator>();
+
+        mainMenu.SetActive(true);
     }
 
     void Update()
@@ -84,7 +89,7 @@ public class DialogueManager : MonoBehaviour
         wolfAnim.SetBool("wolfWalk", isWolfMoving);
         grandmotherAnim.SetBool("grandmotherWalk", isGrandmotherMoving);
 
-        if (isCutscene == true || isMoving)
+        if (isCutscene == true || isMoving || mainMenu.activeInHierarchy == true)
         {
             move.SetActive(false);
         }

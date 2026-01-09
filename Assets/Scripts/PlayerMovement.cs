@@ -60,7 +60,7 @@ public class VRPlayerAnimation : MonoBehaviour
         UpdateGroundType();
         UpdateAmbience();
 
-        if (dialogueManager != null && (dialogueManager.isCutscene || dialogueManager.isMoving))
+        if (dialogueManager != null && (dialogueManager.isCutscene || dialogueManager.isMoving || dialogueManager.mainMenu.activeInHierarchy == true))
         {
             StopWalking();
             return;
