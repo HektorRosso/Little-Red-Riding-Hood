@@ -3495,7 +3495,7 @@ MonoBehaviour:
   dialogueManager: {fileID: 336524851}
   audioSource: {fileID: 336524853}
   mother1: {fileID: 8300000, guid: a6d224ae63ccfa44db387a6f9df5b0a7, type: 3}
-  mother2: {fileID: 8300000, guid: a6d224ae63ccfa44db387a6f9df5b0a7, type: 3}
+  mother2: {fileID: 8300000, guid: 768fcc3edcf7e85468276380794e321b, type: 3}
   mother3: {fileID: 8300000, guid: a6d224ae63ccfa44db387a6f9df5b0a7, type: 3}
   littleRedRidingHood1: {fileID: 0}
   littleRedRidingHood2: {fileID: 0}

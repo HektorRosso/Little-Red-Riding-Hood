@@ -54,10 +54,10 @@ public class DialogueManager : MonoBehaviour
 
     void Start()
     {
-        motherAnim = GetComponentInChildren<Animator>();
-        wolfAnim = GetComponentInChildren<Animator>();
-        lumberjackAnim = GetComponentInChildren<Animator>();
-        grandmotherAnim = GetComponentInChildren<Animator>();
+        motherAnim = mother.GetComponentInChildren<Animator>();
+        wolfAnim = wolf.GetComponentInChildren<Animator>();
+        lumberjackAnim = lumberjack.GetComponentInChildren<Animator>();
+        grandmotherAnim = grandmother.GetComponentInChildren<Animator>();
 
         mainMenu.SetActive(true);
     }
@@ -165,7 +165,6 @@ public class DialogueManager : MonoBehaviour
                 waypointIndex = waypoints.Count - 1;
             }
         }
-
         return isMovingFlag;
     }
 }

@@ -47,8 +47,7 @@ public class Cutscenes : MonoBehaviour
 
     public void StartGame()
     {
-        StartCoroutine(Dialogue(mother1));
-        StartCoroutine(Dialogue(mother2));
+        StartCoroutine(Kitchen());
     }
 
     IEnumerator Mother()
@@ -75,17 +74,29 @@ public class Cutscenes : MonoBehaviour
         yield return new WaitUntil(() => !dialogueManager.isGrandmotherMoving);
     }
 
-    IEnumerator Dialogue(AudioClip clip)
+    IEnumerator PlayVoiceline(AudioClip clip)
     {
         dialogueManager.isCutscene = true;
-        audioSource.PlayOneShot(clip);
-        yield return new WaitForSeconds(clip.length);
+        audioSource.clip = clip;
+        audioSource.Play();
+        yield return new WaitUntil(() => !audioSource.isPlaying);
         dialogueManager.isCutscene = false;
+    }
+
+    private void Dialogue(AudioClip clip)
+    {
+        StartCoroutine(PlayVoiceline(clip));
+    }
+
+    IEnumerator Kitchen()
+    {
+        yield return Wolf();
+        yield return Wolf();
     }
 
     public void BasketInteraction()
     {
-        StartCoroutine(Dialogue(mother3));
+        Dialogue(mother3);
     }
 
     public void FirstPickup()
