@@ -31,6 +31,8 @@ public class DialogueManager : MonoBehaviour
 
     [Header("UI")]
     public GameObject mainMenu;
+    public GameObject theEnd;
+    public GameObject credits;
 
     [Header("Mother")]
     public Transform mother;
@@ -89,7 +91,7 @@ public class DialogueManager : MonoBehaviour
         wolfAnim.SetBool("wolfWalk", isWolfMoving);
         grandmotherAnim.SetBool("grandmotherWalk", isGrandmotherMoving);
 
-        if (isCutscene == true || isMoving || mainMenu.activeInHierarchy == true)
+        if (isCutscene == true || isMoving || mainMenu.activeInHierarchy == true || theEnd.activeInHierarchy == true)
         {
             move.SetActive(false);
         }

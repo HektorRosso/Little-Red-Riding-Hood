@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: a29e905fcec4c734a9ead214f591cd9b
+guid: 4593bb237474e644983a28f030fa02a4
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
@@ -8,17 +8,12 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Face
-    second: {fileID: 2100000, guid: 32b490f2afb7dca48895cf9223b9fe13, type: 2}
+    second: {fileID: 2100000, guid: a32326d86bec8764391a07fe37885c62, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Skin
     second: {fileID: 2100000, guid: 3476afb8b03d4f240b1f0b0da25742ab, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: standardSurface1
-    second: {fileID: 2100000, guid: c311caa6f74149c40beaed44a815d8d7, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -46,11 +41,11 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: Happy Idle
+      name: Lumberjack Great Sword Slash
       takeName: mixamo.com
       internalID: -203655887218126122
       firstFrame: 0
-      lastFrame: 88
+      lastFrame: 76
       wrapMode: 0
       orientationOffsetY: 0
       level: 0

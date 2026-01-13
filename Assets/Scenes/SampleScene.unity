@@ -905,7 +905,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.125, y: -1.5}
+  m_AnchoredPosition: {x: -0.125, y: -1.35}
   m_SizeDelta: {x: 349, y: 50}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &105722684
@@ -3152,6 +3152,7 @@ GameObject:
   m_Component:
   - component: {fileID: 291343455}
   - component: {fileID: 291343459}
+  - component: {fileID: 291343461}
   - component: {fileID: 291343458}
   - component: {fileID: 291343457}
   - component: {fileID: 291343456}
@@ -3279,7 +3280,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b26eae432fb9557438f4150e3a6f894f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scrollSpeed: 0.1
+  dialogueManager: {fileID: 336524851}
+  canvasGroup: {fileID: 291343461}
+--- !u!225 &291343461
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 291343454}
+  m_Enabled: 1
+  m_Alpha: 0
+  m_Interactable: 0
+  m_BlocksRaycasts: 0
+  m_IgnoreParentGroups: 0
 --- !u!1 &309645796
 GameObject:
   m_ObjectHideFlags: 0
@@ -3709,6 +3723,8 @@ MonoBehaviour:
   isLumberjackMoving: 0
   isGrandmotherMoving: 0
   mainMenu: {fileID: 1380233909}
+  theEnd: {fileID: 2000678605}
+  credits: {fileID: 291343454}
   mother: {fileID: 0}
   motherAnim: {fileID: 0}
   motherWaypoints:
@@ -3718,8 +3734,8 @@ MonoBehaviour:
   wolfWaypoints:
   - {fileID: 221988835}
   - {fileID: 1987448026}
-  lumberjack: {fileID: 0}
-  lumberjackAnim: {fileID: 0}
+  lumberjack: {fileID: 1885150962}
+  lumberjackAnim: {fileID: 1885150964}
   lumberjackWaypoints:
   - {fileID: 263485039}
   grandmother: {fileID: 1382507408}
@@ -3740,6 +3756,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 226524806}
+  - {fileID: 1885150962}
   - {fileID: 1382507408}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -18374,8 +18391,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.125, y: -0.825}
-  m_SizeDelta: {x: 349, y: 50}
+  m_AnchoredPosition: {x: -0.6875, y: -0.825}
+  m_SizeDelta: {x: 1920, y: 50}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &1626293561
 MonoBehaviour:
@@ -18412,22 +18429,22 @@ MonoBehaviour:
 
     Cast:
 
-    ??? - Mother
+    ??? as Mother
 
-    ??? - Little Red Riding Hood
+    ??? as Little Red Riding
+    Hood
 
-    ???
-    - Wolf
+    ??? as Wolf
 
-    ??? - Lumberjack
+    ??? as Lumberjack
 
-    ??? - Grandmother
+    ??? as Grandma
 
 
-    Thank you for playing!
+    Thank
+    you for playing!
 
-    We
-    hope you''ve enjoyed this experience!'
+    We hope you''ve enjoyed this experience.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9bbaf05d137e2ac4d9f922454debcd27, type: 2}
   m_sharedMaterial: {fileID: 2895036030321161209, guid: 9bbaf05d137e2ac4d9f922454debcd27, type: 2}
@@ -20431,6 +20448,114 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1881474691}
   m_CullTransparentMesh: 1
+--- !u!1001 &1885150961
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 336524852}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 4593bb237474e644983a28f030fa02a4, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4593bb237474e644983a28f030fa02a4, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4593bb237474e644983a28f030fa02a4, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4593bb237474e644983a28f030fa02a4, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4593bb237474e644983a28f030fa02a4, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4593bb237474e644983a28f030fa02a4, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -2
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4593bb237474e644983a28f030fa02a4, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4593bb237474e644983a28f030fa02a4, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4593bb237474e644983a28f030fa02a4, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4593bb237474e644983a28f030fa02a4, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4593bb237474e644983a28f030fa02a4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4593bb237474e644983a28f030fa02a4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4593bb237474e644983a28f030fa02a4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4593bb237474e644983a28f030fa02a4, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 4593bb237474e644983a28f030fa02a4, type: 3}
+      propertyPath: m_Name
+      value: Lumberjack Great Sword Slash
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 4593bb237474e644983a28f030fa02a4, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1885150964}
+  m_SourcePrefab: {fileID: 100100000, guid: 4593bb237474e644983a28f030fa02a4, type: 3}
+--- !u!4 &1885150962 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 4593bb237474e644983a28f030fa02a4, type: 3}
+  m_PrefabInstance: {fileID: 1885150961}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1885150963 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 4593bb237474e644983a28f030fa02a4, type: 3}
+  m_PrefabInstance: {fileID: 1885150961}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1885150964
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1885150963}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d96c1751eca83c54fbd5b45a3fe5502a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1887216938
 GameObject:
   m_ObjectHideFlags: 0
@@ -22423,7 +22548,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2000678606
 Transform:
   m_ObjectHideFlags: 0

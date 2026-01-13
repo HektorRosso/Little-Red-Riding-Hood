@@ -12,6 +12,11 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: Skin
+    second: {fileID: 2100000, guid: 3476afb8b03d4f240b1f0b0da25742ab, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: standardSurface1
     second: {fileID: 2100000, guid: c311caa6f74149c40beaed44a815d8d7, type: 2}
   materials:
