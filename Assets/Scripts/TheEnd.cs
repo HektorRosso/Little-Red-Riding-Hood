@@ -2,18 +2,11 @@ using UnityEngine;
 
 public class TheEnd : MonoBehaviour
 {
-    public float scrollSpeed = 100f;
+    public float scrollSpeed = 0.1f;
 
-    public RectTransform rectTransform;
-
-    void Start()
-    {
-        rectTransform = GetComponent<RectTransform>();
-    }
-
-    // Update is called once per frame
     void Update()
     {
-        rectTransform.anchoredPosition += new Vector2(0, scrollSpeed * Time.deltaTime);
+        transform.position +=
+            Vector3.up * scrollSpeed * Time.deltaTime;
     }
 }
