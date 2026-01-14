@@ -15,7 +15,7 @@ public class TheEnd : MonoBehaviour
 
     void Update()
     {
-        if (dialogueManager.theEnd.activeInHierarchy && !hasFadedIn)
+        if (dialogueManager.theEnd.activeInHierarchy == true && !hasFadedIn)
         {
             hasFadedIn = true;
             StartCoroutine(FadeIn());
