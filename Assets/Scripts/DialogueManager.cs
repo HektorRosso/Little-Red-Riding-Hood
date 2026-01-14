@@ -4,6 +4,7 @@ using System.Collections.Generic;
 public class DialogueManager : MonoBehaviour
 {
     public GameObject move;
+    public Cutscenes cutscenes;
 
     [HideInInspector]
     public bool isCutscene;
@@ -13,9 +14,13 @@ public class DialogueManager : MonoBehaviour
     [HideInInspector]
     public bool isMotherMoving;
     [HideInInspector]
-    public bool isWolfMoving;
+    public bool isWolfWalking;
     [HideInInspector]
-    public bool isLumberjackMoving;
+    public bool isWolfRunning;
+    [HideInInspector]
+    public bool isLumberjackWalking;
+    [HideInInspector]
+    public bool isLumberjackRunning;
     [HideInInspector]
     public bool isGrandmotherMoving;
 
@@ -66,21 +71,31 @@ public class DialogueManager : MonoBehaviour
 
     void Update()
     {
-        isMoving = (isMotherMoving || isWolfMoving || isLumberjackMoving || isGrandmotherMoving);
+        isMoving = (isMotherMoving || isWolfWalking || isWolfRunning || isLumberjackWalking || isLumberjackRunning || isGrandmotherMoving);
 
         if (isMotherMoving)
         {
             isMotherMoving = MoveTowardsWaypoint(mother, motherWaypoints, ref motherWaypointIndex, ref motherAtWaypoint, ref isMotherMoving, 1);
         }
 
-        if (isWolfMoving)
+        if (isWolfWalking)
         {
-            isWolfMoving = MoveTowardsWaypoint(wolf, wolfWaypoints, ref wolfWaypointIndex, ref wolfAtWaypoint, ref isWolfMoving, 1);
+            isWolfWalking = MoveTowardsWaypoint(wolf, wolfWaypoints, ref wolfWaypointIndex, ref wolfAtWaypoint, ref isWolfWalking, 1);
         }
 
-        if (isLumberjackMoving)
+        if (isWolfRunning)
         {
-            isLumberjackMoving = MoveTowardsWaypoint(lumberjack, lumberjackWaypoints, ref lumberjackWaypointIndex, ref lumberjackAtWaypoint, ref isLumberjackMoving, 1);
+            isWolfRunning = MoveTowardsWaypoint(wolf, wolfWaypoints, ref wolfWaypointIndex, ref wolfAtWaypoint, ref isWolfRunning, 2);
+        }
+
+        if (isLumberjackWalking)
+        {
+            isLumberjackWalking = MoveTowardsWaypoint(lumberjack, lumberjackWaypoints, ref lumberjackWaypointIndex, ref lumberjackAtWaypoint, ref isLumberjackWalking, 1);
+        }
+
+        if (isLumberjackRunning)
+        {
+            isLumberjackRunning = MoveTowardsWaypoint(lumberjack, lumberjackWaypoints, ref lumberjackWaypointIndex, ref lumberjackAtWaypoint, ref isLumberjackRunning, 2);
         }
 
         if (isGrandmotherMoving)
@@ -88,7 +103,17 @@ public class DialogueManager : MonoBehaviour
             isGrandmotherMoving = MoveTowardsWaypoint(grandmother, grandmotherWaypoints, ref grandmotherWaypointIndex, ref grandmotherAtWaypoint, ref isGrandmotherMoving, 1);
         }
 
-        wolfAnim.SetBool("wolfWalk", isWolfMoving);
+        if (cutscenes.isRunning == true)
+        {
+            wolfAnim.SetBool("wolfRun", isWolfRunning);
+            lumberjackAnim.SetBool("lumberjackRun", isLumberjackRunning);
+        }
+        else
+        {
+            wolfAnim.SetBool("wolfWalk", isWolfWalking);
+            lumberjackAnim.SetBool("lumberjackWalk", isLumberjackWalking);
+        }
+
         grandmotherAnim.SetBool("grandmotherWalk", isGrandmotherMoving);
 
         if (isCutscene == true || isMoving || mainMenu.activeInHierarchy == true || theEnd.activeInHierarchy == true)
@@ -115,7 +140,10 @@ public class DialogueManager : MonoBehaviour
         if (wolfWaypointIndex < wolfWaypoints.Count)
         {
             wolfAtWaypoint = false;
-            StartMoving(ref isWolfMoving);
+            if (cutscenes.isRunning == true)
+                StartMoving(ref isWolfRunning);
+            else
+                StartMoving(ref isWolfWalking);
         }
     }
 
@@ -124,7 +152,10 @@ public class DialogueManager : MonoBehaviour
         if (lumberjackWaypointIndex < lumberjackWaypoints.Count)
         {
             lumberjackAtWaypoint = false;
-            StartMoving(ref isLumberjackMoving);
+            if (cutscenes.isRunning == true)
+                StartMoving(ref isLumberjackRunning);
+            else
+                StartMoving(ref isLumberjackWalking);
         }
     }
     public void StartGrandmotherMoving()

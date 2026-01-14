@@ -6,6 +6,8 @@ public class Cutscenes : MonoBehaviour
     public DialogueManager dialogueManager;
     public AudioSource audioSource;
     private bool firstPickup;
+    [HideInInspector]
+    public bool isRunning;
 
     [Header("Mother")]
     public AudioClip mother1;
@@ -59,13 +61,19 @@ public class Cutscenes : MonoBehaviour
     IEnumerator Wolf()
     {
         dialogueManager.StartWolfMoving();
-        yield return new WaitUntil(() => !dialogueManager.isWolfMoving);
+        if (isRunning == true)
+            yield return new WaitUntil(() => !dialogueManager.isWolfRunning);
+        else
+            yield return new WaitUntil(() => !dialogueManager.isWolfWalking);
     }
 
     IEnumerator Lumberjack()
     {
         dialogueManager.StartLumberjackMoving();
-        yield return new WaitUntil(() => !dialogueManager.isLumberjackMoving);
+        if (isRunning == true)
+            yield return new WaitUntil(() => !dialogueManager.isLumberjackRunning);
+        else
+            yield return new WaitUntil(() => !dialogueManager.isLumberjackWalking);
     }
 
     IEnumerator Grandmother()
