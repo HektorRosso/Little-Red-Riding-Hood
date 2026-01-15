@@ -3780,8 +3780,10 @@ MonoBehaviour:
   isCutscene: 0
   isMoving: 0
   isMotherMoving: 0
-  isWolfMoving: 0
-  isLumberjackMoving: 0
+  isWolfWalking: 0
+  isWolfRunning: 0
+  isLumberjackWalking: 0
+  isLumberjackRunning: 0
   isGrandmotherMoving: 0
   mainMenu: {fileID: 1380233909}
   theEnd: {fileID: 2000678605}
@@ -4221,7 +4223,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueManager: {fileID: 336524851}
   audioSource: {fileID: 385802885}
-  isRunning: 0
   mother1: {fileID: 8300000, guid: a6d224ae63ccfa44db387a6f9df5b0a7, type: 3}
   mother2: {fileID: 8300000, guid: 768fcc3edcf7e85468276380794e321b, type: 3}
   mother3: {fileID: 8300000, guid: a6d224ae63ccfa44db387a6f9df5b0a7, type: 3}
@@ -8525,7 +8526,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 07b2feab4a39c204b9c49ead8f9b0b61, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.8
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 07b2feab4a39c204b9c49ead8f9b0b61, type: 3}
       propertyPath: m_LocalPosition.y
@@ -13265,19 +13266,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 4e0207e90e9e66042ac3b9fe1a760d42, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.25
+      value: 0.325
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 4e0207e90e9e66042ac3b9fe1a760d42, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.75
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 4e0207e90e9e66042ac3b9fe1a760d42, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.25
+      value: -0.4
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 4e0207e90e9e66042ac3b9fe1a760d42, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.92387956
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 4e0207e90e9e66042ac3b9fe1a760d42, type: 3}
       propertyPath: m_LocalRotation.x
@@ -13285,7 +13286,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 4e0207e90e9e66042ac3b9fe1a760d42, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: 0.38268343
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 4e0207e90e9e66042ac3b9fe1a760d42, type: 3}
       propertyPath: m_LocalRotation.z
@@ -13297,7 +13298,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 4e0207e90e9e66042ac3b9fe1a760d42, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: 45
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 4e0207e90e9e66042ac3b9fe1a760d42, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -18992,7 +18993,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 385802886}
         m_TargetAssemblyTypeName: Cutscenes, Assembly-CSharp
         m_MethodName: BasketInteraction
         m_Mode: 1
@@ -19121,7 +19122,7 @@ Transform:
   m_GameObject: {fileID: 1658619200}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.84445584, y: 0.20711279, z: 1.9708655}
+  m_LocalPosition: {x: 43, y: 3, z: 57}
   m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -20715,9 +20716,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 4593bb237474e644983a28f030fa02a4, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1885150964}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 4593bb237474e644983a28f030fa02a4, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1885150965}
   m_SourcePrefab: {fileID: 100100000, guid: 4593bb237474e644983a28f030fa02a4, type: 3}
 --- !u!4 &1885150962 stripped
 Transform:
@@ -20751,19 +20749,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &1885150965
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1885150963}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2d918cd6d17f0c84ea34f24242af60d0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hitLayer: 0
 --- !u!1 &1887216938
 GameObject:
   m_ObjectHideFlags: 0

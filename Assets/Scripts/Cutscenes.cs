@@ -6,8 +6,6 @@ public class Cutscenes : MonoBehaviour
     public DialogueManager dialogueManager;
     public AudioSource audioSource;
     private bool firstPickup;
-    [HideInInspector]
-    public bool isRunning;
 
     [Header("Mother")]
     public AudioClip mother1;
@@ -49,7 +47,7 @@ public class Cutscenes : MonoBehaviour
 
     public void StartGame()
     {
-        StartCoroutine(Kitchen());
+        
     }
 
     IEnumerator Mother()
@@ -58,22 +56,28 @@ public class Cutscenes : MonoBehaviour
         yield return new WaitUntil(() => !dialogueManager.isMotherMoving);
     }
 
-    IEnumerator Wolf()
+    IEnumerator WolfRun()
     {
-        dialogueManager.StartWolfMoving();
-        if (isRunning == true)
-            yield return new WaitUntil(() => !dialogueManager.isWolfRunning);
-        else
-            yield return new WaitUntil(() => !dialogueManager.isWolfWalking);
+        dialogueManager.StartWolfRunning();
+        yield return new WaitUntil(() => !dialogueManager.isWolfRunning);
     }
 
-    IEnumerator Lumberjack()
+    IEnumerator WolfWalk()
     {
-        dialogueManager.StartLumberjackMoving();
-        if (isRunning == true)
-            yield return new WaitUntil(() => !dialogueManager.isLumberjackRunning);
-        else
-            yield return new WaitUntil(() => !dialogueManager.isLumberjackWalking);
+        dialogueManager.StartWolfWalking();
+        yield return new WaitUntil(() => !dialogueManager.isWolfWalking);
+    }
+
+    IEnumerator LumberjackRun()
+    {
+        dialogueManager.StartLumberjackRunning();
+        yield return new WaitUntil(() => !dialogueManager.isLumberjackRunning);
+    }
+
+    IEnumerator LumberjackWalk()
+    {
+        dialogueManager.StartLumberjackWalking();
+        yield return new WaitUntil(() => !dialogueManager.isLumberjackWalking);
     }
 
     IEnumerator Grandmother()
@@ -96,15 +100,10 @@ public class Cutscenes : MonoBehaviour
         StartCoroutine(PlayVoiceline(clip));
     }
 
-    IEnumerator Kitchen()
-    {
-        yield return Wolf();
-        yield return Wolf();
-    }
-
     public void BasketInteraction()
     {
         Dialogue(mother3);
+        StartCoroutine(LumberjackWalk());
     }
 
     public void FirstPickup()
