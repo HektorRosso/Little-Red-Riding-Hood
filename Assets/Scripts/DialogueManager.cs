@@ -179,31 +179,37 @@ public class DialogueManager : MonoBehaviour
         isMovingFlag = true;
     }
 
-    private bool MoveTowardsWaypoint(Transform character, List<Transform> waypoints, ref int waypointIndex, ref bool atWaypoint, ref bool isMovingFlag, float moveSpeed)
+    private bool MoveTowardsWaypoint(Transform character,List<Transform> waypoints,ref int waypointIndex,ref bool atWaypoint,ref bool isMovingFlag,float moveSpeed)
     {
         if (waypoints == null || waypoints.Count == 0 || atWaypoint)
             return false;
 
         moveSpeed *= Time.deltaTime;
-        character.position = Vector3.MoveTowards(character.position, waypoints[waypointIndex].position, moveSpeed);
 
-        Vector3 direction = waypoints[waypointIndex].position - character.position;
-        if (direction != Vector3.zero)
+        Vector3 targetPosition = waypoints[waypointIndex].position;
+        targetPosition.y = character.position.y;
+
+        character.position = Vector3.MoveTowards(
+            character.position,
+            targetPosition,
+            moveSpeed);
+
+        Vector3 direction = targetPosition - character.position;
+
+        if (direction.sqrMagnitude > 0.001f)
         {
-            Quaternion targetRotation = Quaternion.LookRotation(direction, Vector3.up);
-            character.rotation = Quaternion.Lerp(character.rotation, targetRotation, Time.deltaTime * 10f);
+            Quaternion targetRotation = Quaternion.LookRotation(direction);
+            character.rotation = Quaternion.Lerp(character.rotation,targetRotation,Time.deltaTime * 10f);
         }
 
-        if (Vector3.Distance(character.position, waypoints[waypointIndex].position) <= 0.05f)
+        if (Vector3.Distance(character.position, targetPosition) <= 0.05f)
         {
             atWaypoint = true;
             isMovingFlag = false;
 
             waypointIndex++;
             if (waypointIndex >= waypoints.Count)
-            {
                 waypointIndex = waypoints.Count - 1;
-            }
         }
         return isMovingFlag;
     }

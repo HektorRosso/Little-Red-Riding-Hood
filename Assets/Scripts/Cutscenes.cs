@@ -86,6 +86,11 @@ public class Cutscenes : MonoBehaviour
         yield return new WaitUntil(() => !dialogueManager.isGrandmotherMoving);
     }
 
+    IEnumerator Move(IEnumerator coroutine)
+    {
+        yield return StartCoroutine(coroutine);
+    }
+
     IEnumerator PlayVoiceline(AudioClip clip)
     {
         dialogueManager.isCutscene = true;
@@ -93,6 +98,11 @@ public class Cutscenes : MonoBehaviour
         audioSource.Play();
         yield return new WaitUntil(() => !audioSource.isPlaying);
         dialogueManager.isCutscene = false;
+    }
+
+    private void Moving(IEnumerator coroutine)
+    {
+        StartCoroutine(Move(coroutine));
     }
 
     private void Dialogue(AudioClip clip)
@@ -103,7 +113,8 @@ public class Cutscenes : MonoBehaviour
     public void BasketInteraction()
     {
         Dialogue(mother3);
-        StartCoroutine(LumberjackWalk());
+        dialogueManager.lumberjackAnim.SetBool("lumberjackTurn", true);
+        Moving(LumberjackWalk());
     }
 
     public void FirstPickup()
