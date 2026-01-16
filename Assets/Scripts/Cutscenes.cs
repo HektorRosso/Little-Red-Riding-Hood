@@ -86,7 +86,7 @@ public class Cutscenes : MonoBehaviour
         yield return new WaitUntil(() => !dialogueManager.isGrandmotherMoving);
     }
 
-    IEnumerator Move(IEnumerator coroutine)
+    IEnumerator Run(IEnumerator coroutine)
     {
         yield return StartCoroutine(coroutine);
     }
@@ -100,9 +100,9 @@ public class Cutscenes : MonoBehaviour
         dialogueManager.isCutscene = false;
     }
 
-    private void Moving(IEnumerator coroutine)
+    private void Running(IEnumerator coroutine)
     {
-        StartCoroutine(Move(coroutine));
+        StartCoroutine(Run(coroutine));
     }
 
     private void Dialogue(AudioClip clip)
@@ -113,8 +113,48 @@ public class Cutscenes : MonoBehaviour
     public void BasketInteraction()
     {
         Dialogue(mother3);
-        dialogueManager.lumberjackAnim.SetBool("lumberjackTurn", true);
-        Moving(LumberjackWalk());
+    }
+
+    public void Help()
+    {
+        Dialogue(littleRedRidingHood7);
+        StartCoroutine(Coming());
+    }
+
+    IEnumerator Coming()
+    {
+        dialogueManager.isCutscene = true;
+
+        Animator anim = dialogueManager.lumberjackAnim;
+
+        anim.SetBool("lumberjackChopping", false);
+        anim.SetBool("lumberjackWalk", true);
+
+        // Walk first
+        yield return StartCoroutine(LumberjackWalk());
+
+        // Turn
+        anim.SetBool("lumberjackWalk", false);
+        anim.SetBool("lumberjackTurn", true);
+
+        // Wait for turn to start
+        yield return new WaitUntil(() =>
+            anim.GetCurrentAnimatorStateInfo(0).IsName("LumberjackTurn")
+        );
+
+        // WAIT UNTIL TURN STATE FULLY ENDS
+        yield return new WaitWhile(() =>
+            anim.GetCurrentAnimatorStateInfo(0).IsName("LumberjackTurn")
+        );
+
+        // End turn
+        anim.SetBool("lumberjackTurn", false);
+        anim.SetBool("lumberjackWalk", true);
+
+        // Walk again
+        yield return StartCoroutine(LumberjackWalk());
+
+        dialogueManager.isCutscene = false;
     }
 
     public void FirstPickup()

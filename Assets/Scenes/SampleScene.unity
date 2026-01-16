@@ -19028,7 +19028,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 385802886}
         m_TargetAssemblyTypeName: Cutscenes, Assembly-CSharp
-        m_MethodName: BasketInteraction
+        m_MethodName: Help
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
