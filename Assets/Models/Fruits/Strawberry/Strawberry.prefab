@@ -28,6 +28,30 @@ PrefabInstance:
       propertyPath: m_Center.y
       value: 0.09
       objectReference: {fileID: 0}
+    - target: {fileID: 7288474583787213787, guid: e5314483b159488408150b00a020715e, type: 3}
+      propertyPath: m_HoverExited.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 8881978118561774173}
+    - target: {fileID: 7288474583787213787, guid: e5314483b159488408150b00a020715e, type: 3}
+      propertyPath: m_HoverEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 8881978118561774173}
+    - target: {fileID: 7288474583787213787, guid: e5314483b159488408150b00a020715e, type: 3}
+      propertyPath: m_HoverExited.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: set_material
+      objectReference: {fileID: 0}
+    - target: {fileID: 7288474583787213787, guid: e5314483b159488408150b00a020715e, type: 3}
+      propertyPath: m_HoverEntered.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: set_material
+      objectReference: {fileID: 0}
+    - target: {fileID: 7288474583787213787, guid: e5314483b159488408150b00a020715e, type: 3}
+      propertyPath: m_HoverExited.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 2100000, guid: 1da132e565645074999a75c54563e57d, type: 2}
+    - target: {fileID: 7288474583787213787, guid: e5314483b159488408150b00a020715e, type: 3}
+      propertyPath: m_HoverEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 2100000, guid: 9c2066ee70b1e7e4e8e064ff98da31ca, type: 2}
     - target: {fileID: 7641079815649147195, guid: e5314483b159488408150b00a020715e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -70,7 +94,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9204553905695310220, guid: e5314483b159488408150b00a020715e, type: 3}
       propertyPath: m_Name
-      value: Strawberry Variant
+      value: Strawberry
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
@@ -162,5 +186,10 @@ PrefabInstance:
 --- !u!4 &696669861344385987 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: d5d9db1a1d4f9ae44a9a8fffcddffe13, type: 3}
+  m_PrefabInstance: {fileID: 1018280744970779688}
+  m_PrefabAsset: {fileID: 0}
+--- !u!23 &8881978118561774173 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 8458473661877241461, guid: d5d9db1a1d4f9ae44a9a8fffcddffe13, type: 3}
   m_PrefabInstance: {fileID: 1018280744970779688}
   m_PrefabAsset: {fileID: 0}

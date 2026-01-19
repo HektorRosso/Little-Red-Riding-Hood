@@ -90,7 +90,7 @@ public class DialogueManager : MonoBehaviour
 
         if (isLumberjackWalking)
         {
-            isLumberjackWalking = MoveTowardsWaypoint(lumberjack, lumberjackWaypoints, ref lumberjackWaypointIndex, ref lumberjackAtWaypoint, ref isLumberjackWalking, 1);
+            isLumberjackWalking = MoveTowardsWaypoint(lumberjack, lumberjackWaypoints, ref lumberjackWaypointIndex, ref lumberjackAtWaypoint, ref isLumberjackWalking, 2);
         }
 
         if (isLumberjackRunning)

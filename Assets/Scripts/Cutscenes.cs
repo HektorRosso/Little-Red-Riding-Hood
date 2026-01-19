@@ -130,28 +130,16 @@ public class Cutscenes : MonoBehaviour
         anim.SetBool("lumberjackChopping", false);
         anim.SetBool("lumberjackWalk", true);
 
-        // Walk first
         yield return StartCoroutine(LumberjackWalk());
 
-        // Turn
         anim.SetBool("lumberjackWalk", false);
         anim.SetBool("lumberjackTurn", true);
 
-        // Wait for turn to start
-        yield return new WaitUntil(() =>
-            anim.GetCurrentAnimatorStateInfo(0).IsName("LumberjackTurn")
-        );
+        yield return StartCoroutine(PlayVoiceline(lumberjack1));
 
-        // WAIT UNTIL TURN STATE FULLY ENDS
-        yield return new WaitWhile(() =>
-            anim.GetCurrentAnimatorStateInfo(0).IsName("LumberjackTurn")
-        );
-
-        // End turn
         anim.SetBool("lumberjackTurn", false);
         anim.SetBool("lumberjackWalk", true);
 
-        // Walk again
         yield return StartCoroutine(LumberjackWalk());
 
         dialogueManager.isCutscene = false;

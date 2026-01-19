@@ -9,6 +9,11 @@ ModelImporter:
       assembly: UnityEngine.CoreModule
       name: Petals
     second: {fileID: 2100000, guid: feab6070257dbae4db8d07a70277660a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Stem_Leaves
+    second: {fileID: 2100000, guid: dc2834b032a136c419fa316f2ca5ecdf, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
