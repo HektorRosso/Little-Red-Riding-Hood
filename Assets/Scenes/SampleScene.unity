@@ -551,7 +551,7 @@ Transform:
   m_GameObject: {fileID: 74608968}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0.25, z: 1.7500001}
+  m_LocalPosition: {x: 0.1, y: 0.25, z: 1.7500001}
   m_LocalScale: {x: 5, y: 5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -17613,7 +17613,7 @@ Transform:
   m_GameObject: {fileID: 1512186744}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: -0.7071068}
-  m_LocalPosition: {x: 0, y: 0.25, z: 1.7500001}
+  m_LocalPosition: {x: -0.1, y: 0.25, z: 1.7500001}
   m_LocalScale: {x: 5, y: 5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -18664,37 +18664,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Programming:
-
-    Ivo Ross
-
-
-    3d Modelling:
-
-    Clementine Ross
-
-    Jayden
-    Adamson-Bridges
-
-
-    Cast:
-
-    ??? as the Mother
-
-    ??? as Little Red Riding
-    Hood
-
-    ??? as the Wolf
-
-    ??? as the Lumberjack
-
-    ??? as the Grandmother
-
-
-    Thank
-    you for playing!
-
-    We hope you''ve enjoyed this experience.'
+  m_text: "Programming:\nIvo Ross\n\n3d Modelling:\nClementine Ross\nJayden Adamson-Bridges\n\nCast:\nAthalia
+    Mclean as the Mother\nRia Virdee-d\u2019Silva as Little Red Riding Hood\nGabi
+    Gomez Torres as the Wolf\nAfam Ubenyi as the Lumberjack\nLucas Allwright as the
+    Grandmother\n\nThank you for playing!\nWe hope you've enjoyed this experience."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9bbaf05d137e2ac4d9f922454debcd27, type: 2}
   m_sharedMaterial: {fileID: 2895036030321161209, guid: 9bbaf05d137e2ac4d9f922454debcd27, type: 2}
@@ -22924,7 +22897,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2000678606
 Transform:
   m_ObjectHideFlags: 0

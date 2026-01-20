@@ -56,7 +56,7 @@ public class TheEnd : MonoBehaviour
 
     void Scroll()
     {
-        if (transform.position.y < 4.25f)
+        if (transform.position.y < 6f)
         {
             transform.position += Vector3.up * scrollSpeed * Time.deltaTime;
         }
