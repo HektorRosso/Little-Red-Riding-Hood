@@ -12,8 +12,6 @@ public class DialogueManager : MonoBehaviour
     public bool isMoving;
 
     [HideInInspector]
-    public bool isMotherMoving;
-    [HideInInspector]
     public bool isWolfWalking;
     [HideInInspector]
     public bool isWolfRunning;
@@ -24,12 +22,10 @@ public class DialogueManager : MonoBehaviour
     [HideInInspector]
     public bool isGrandmotherMoving;
 
-    private bool motherAtWaypoint;
     private bool wolfAtWaypoint;
     private bool lumberjackAtWaypoint;
     private bool grandmotherAtWaypoint;
 
-    private int motherWaypointIndex;
     private int wolfWaypointIndex;
     private int lumberjackWaypointIndex;
     private int grandmotherWaypointIndex;
@@ -42,7 +38,6 @@ public class DialogueManager : MonoBehaviour
     [Header("Mother")]
     public Transform mother;
     public Animator motherAnim;
-    public List<Transform> motherWaypoints = new List<Transform>();
 
     [Header("Wolf")]
     public Transform wolf;
@@ -71,12 +66,7 @@ public class DialogueManager : MonoBehaviour
 
     void Update()
     {
-        isMoving = (isMotherMoving || isWolfWalking || isWolfRunning || isLumberjackWalking || isLumberjackRunning || isGrandmotherMoving);
-
-        if (isMotherMoving)
-        {
-            isMotherMoving = MoveTowardsWaypoint(mother, motherWaypoints, ref motherWaypointIndex, ref motherAtWaypoint, ref isMotherMoving, 1);
-        }
+        isMoving = (isWolfWalking || isWolfRunning || isLumberjackWalking || isLumberjackRunning || isGrandmotherMoving);
 
         if (isWolfWalking)
         {
@@ -118,15 +108,6 @@ public class DialogueManager : MonoBehaviour
         else
         {
             move.SetActive(true);
-        }
-    }
-
-    public void StartMotherMoving()
-    {
-        if (motherWaypointIndex < motherWaypoints.Count)
-        {
-            motherAtWaypoint = false;
-            StartMoving(ref isMotherMoving);
         }
     }
 

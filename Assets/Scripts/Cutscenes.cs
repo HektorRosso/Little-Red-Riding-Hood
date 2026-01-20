@@ -11,6 +11,7 @@ public class Cutscenes : MonoBehaviour
     public AudioClip mother1;
     public AudioClip mother2;
     public AudioClip mother3;
+    public AudioClip mother4;
 
     [Header("Little Red Riding Hood")]
     public AudioClip littleRedRidingHood1;
@@ -30,6 +31,7 @@ public class Cutscenes : MonoBehaviour
     public AudioClip wolf5;
     public AudioClip wolf6;
     public AudioClip wolf7;
+    public AudioClip wolf8;
 
     [Header("Lumberjack")]
     public AudioClip lumberjack1;
@@ -48,12 +50,6 @@ public class Cutscenes : MonoBehaviour
     public void StartGame()
     {
         
-    }
-
-    IEnumerator Mother()
-    {
-        dialogueManager.StartMotherMoving();
-        yield return new WaitUntil(() => !dialogueManager.isMotherMoving);
     }
 
     IEnumerator WolfRun()

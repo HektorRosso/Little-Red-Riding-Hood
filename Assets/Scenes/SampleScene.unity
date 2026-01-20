@@ -905,7 +905,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.125, y: -1.35}
+  m_AnchoredPosition: {x: -0.125, y: -1.475}
   m_SizeDelta: {x: 349, y: 50}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &105722684
@@ -3370,6 +3370,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueManager: {fileID: 336524851}
   canvasGroup: {fileID: 291343461}
+  player: {fileID: 2107292356}
 --- !u!225 &291343461
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -3805,7 +3806,6 @@ MonoBehaviour:
   cutscenes: {fileID: 385802886}
   isCutscene: 0
   isMoving: 0
-  isMotherMoving: 0
   isWolfWalking: 0
   isWolfRunning: 0
   isLumberjackWalking: 0
@@ -3816,8 +3816,6 @@ MonoBehaviour:
   credits: {fileID: 291343454}
   mother: {fileID: 0}
   motherAnim: {fileID: 0}
-  motherWaypoints:
-  - {fileID: 1762246735}
   wolf: {fileID: 226524806}
   wolfAnim: {fileID: 226524805}
   wolfWaypoints:
@@ -4253,6 +4251,7 @@ MonoBehaviour:
   mother1: {fileID: 8300000, guid: a6d224ae63ccfa44db387a6f9df5b0a7, type: 3}
   mother2: {fileID: 8300000, guid: 768fcc3edcf7e85468276380794e321b, type: 3}
   mother3: {fileID: 8300000, guid: a6d224ae63ccfa44db387a6f9df5b0a7, type: 3}
+  mother4: {fileID: 0}
   littleRedRidingHood1: {fileID: 0}
   littleRedRidingHood2: {fileID: 0}
   littleRedRidingHood3: {fileID: 0}
@@ -4268,6 +4267,7 @@ MonoBehaviour:
   wolf5: {fileID: 0}
   wolf6: {fileID: 0}
   wolf7: {fileID: 0}
+  wolf8: {fileID: 0}
   lumberjack1: {fileID: 8300000, guid: a6d224ae63ccfa44db387a6f9df5b0a7, type: 3}
   lumberjack2: {fileID: 0}
   grandmother1: {fileID: 0}
@@ -14928,38 +14928,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1326031627}
   m_CullTransparentMesh: 1
---- !u!1 &1329859047
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1329859048}
-  m_Layer: 0
-  m_Name: Mother Waypoints
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1329859048
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1329859047}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1762246735}
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1351058435
 GameObject:
   m_ObjectHideFlags: 0
@@ -18641,7 +18609,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.6875, y: -0.825}
+  m_AnchoredPosition: {x: -0.6875, y: -0.875}
   m_SizeDelta: {x: 1920, y: 50}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &1626293561
@@ -18664,10 +18632,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Programming:\nIvo Ross\n\n3d Modelling:\nClementine Ross\nJayden Adamson-Bridges\n\nCast:\nAthalia
-    Mclean as the Mother\nRia Virdee-d\u2019Silva as Little Red Riding Hood\nGabi
-    Gomez Torres as the Wolf\nAfam Ubenyi as the Lumberjack\nLucas Allwright as the
-    Grandmother\n\nThank you for playing!\nWe hope you've enjoyed this experience."
+  m_text: "programming and soundtrack:\nivo ross\n\n3d modelling:\nclementine ross\njayden
+    adamson-bridges\n\ncast:\nathalia mclean - mother\nria virdee-d\u2019silva -
+    little red riding hood\ngabi gomez torres - wolf\nafam ubenyi - lumberjack\nlucas
+    allwright - grandmother\n\nsfx:\ndaniel monk\nfinn moran\nkyran wallace\n\nthank
+    you for playing!\nwe hope you've enjoyed this experience."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9bbaf05d137e2ac4d9f922454debcd27, type: 2}
   m_sharedMaterial: {fileID: 2895036030321161209, guid: 9bbaf05d137e2ac4d9f922454debcd27, type: 2}
@@ -19979,37 +19948,6 @@ MonoBehaviour:
       m_Calls: []
   m_SkinnedMeshRenderer: {fileID: 546380357}
   m_BlendShapeIndex: 0
---- !u!1 &1762246734
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1762246735}
-  m_Layer: 0
-  m_Name: Mother Waypoint 0
-  m_TagString: Untagged
-  m_Icon: {fileID: 6519382022992737161, guid: 0000000000000000d000000000000000, type: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1762246735
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1762246734}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1329859048}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1773344542 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7917674758326848202, guid: 77e7c27b2c5525e4aa8cc9f99d654486, type: 3}
@@ -26453,7 +26391,6 @@ SceneRoots:
   - {fileID: 1401603499}
   - {fileID: 594657885}
   - {fileID: 1658619204}
-  - {fileID: 1329859048}
   - {fileID: 2013219018}
   - {fileID: 774531556}
   - {fileID: 1461056718}

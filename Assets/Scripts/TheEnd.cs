@@ -12,6 +12,7 @@ public class TheEnd : MonoBehaviour
 
     public DialogueManager dialogueManager;
     public CanvasGroup canvasGroup;
+    public Transform player;
 
     void Update()
     {
@@ -56,7 +57,7 @@ public class TheEnd : MonoBehaviour
 
     void Scroll()
     {
-        if (transform.position.y < 6f)
+        if (transform.position.y < player.transform.position.y + 4.75f)
         {
             transform.position += Vector3.up * scrollSpeed * Time.deltaTime;
         }
