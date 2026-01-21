@@ -1,19 +1,9 @@
 fileFormatVersion: 2
-guid: 65e32ea218758004ea1bcaf572dcc7fc
+guid: 3e6cfb554f266604a82ee0d9ab9f59ef
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Door_fbx_lambert3
-    second: {fileID: 2100000, guid: e3164ba69c61ebc4ab1d2686dfe74e35, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Logs
-    second: {fileID: 2100000, guid: e3164ba69c61ebc4ab1d2686dfe74e35, type: 2}
+  externalObjects: {}
   materials:
     materialImportMode: 2
     materialName: 0

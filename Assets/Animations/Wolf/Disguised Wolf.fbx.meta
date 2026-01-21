@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 65e32ea218758004ea1bcaf572dcc7fc
+guid: 978ec4f188d8e094faf581449060b08a
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
@@ -7,13 +7,23 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Door_fbx_lambert3
-    second: {fileID: 2100000, guid: e3164ba69c61ebc4ab1d2686dfe74e35, type: 2}
+      name: Face
+    second: {fileID: 2100000, guid: da9a044443cc7ea448e1a2547fac4652, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Logs
-    second: {fileID: 2100000, guid: e3164ba69c61ebc4ab1d2686dfe74e35, type: 2}
+      name: Muzzle
+    second: {fileID: 2100000, guid: 2eb73888ee851f944ad48f5b52a593f7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Snout
+    second: {fileID: 2100000, guid: 91c4982140d4a0a41b48eb1cb3837fbd, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: standardSurface1
+    second: {fileID: 2100000, guid: c311caa6f74149c40beaed44a815d8d7, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

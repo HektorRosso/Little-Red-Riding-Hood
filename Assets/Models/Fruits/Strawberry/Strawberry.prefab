@@ -28,6 +28,10 @@ PrefabInstance:
       propertyPath: m_Center.y
       value: 0.09
       objectReference: {fileID: 0}
+    - target: {fileID: 3945444257687196705, guid: e5314483b159488408150b00a020715e, type: 3}
+      propertyPath: m_Renderer
+      value: 
+      objectReference: {fileID: 8881978118561774173}
     - target: {fileID: 7288474583787213787, guid: e5314483b159488408150b00a020715e, type: 3}
       propertyPath: m_HoverExited.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 

@@ -2,6 +2,9 @@ using UnityEngine;
 
 public class Door : MonoBehaviour
 {
+    public int minLimits = -90;
+    public int maxLimits = 90;
+
     public AudioSource audioSource;
     public AudioClip doorOpen;
     public AudioClip doorClose;
@@ -25,8 +28,8 @@ public class Door : MonoBehaviour
         }
 
         limits = hinge.limits;
-        limits.min = -90;
-        limits.max = 90;
+        limits.min = minLimits;
+        limits.max = maxLimits;
         limits.bounciness = 0;
         limits.bounceMinVelocity = 0;
         hinge.limits = limits;
