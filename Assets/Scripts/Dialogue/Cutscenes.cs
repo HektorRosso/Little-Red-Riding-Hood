@@ -1,4 +1,5 @@
 using System.Collections;
+using UnityEditor;
 using UnityEngine;
 
 public class Cutscenes : MonoBehaviour
@@ -6,6 +7,7 @@ public class Cutscenes : MonoBehaviour
     public DialogueManager dialogueManager;
     public AudioSource audioSource;
     private bool firstPickup;
+    public GameObject wig;
 
     [Header("Mother")]
     public AudioClip mother1;
@@ -49,7 +51,7 @@ public class Cutscenes : MonoBehaviour
 
     public void StartGame()
     {
-        
+        StartCoroutine(Morning());
     }
 
     IEnumerator WolfRun()
@@ -106,9 +108,43 @@ public class Cutscenes : MonoBehaviour
         StartCoroutine(PlayVoiceline(clip));
     }
 
+    IEnumerator Morning()
+    {
+        dialogueManager.isCutscene = true;
+
+        Animator anim = dialogueManager.motherAnim;
+
+        yield return StartCoroutine(PlayVoiceline(mother1));
+
+        anim.SetBool("motherPoint", true);
+
+        yield return StartCoroutine(PlayVoiceline(mother2));
+
+        anim.SetBool("motherPoint", false);
+
+        yield return null;
+    }
+
     public void BasketInteraction()
     {
-        Dialogue(mother3);
+        StartCoroutine(Goodbye());
+    }
+
+    IEnumerator Goodbye()
+    {
+        Animator anim = dialogueManager.motherAnim;
+
+        yield return StartCoroutine(PlayVoiceline(mother3));
+
+        anim.SetBool("motherWave", true);
+
+        yield return StartCoroutine(PlayVoiceline(mother4));
+
+        anim.SetBool("motherWave", false);
+
+        yield return null;
+
+        dialogueManager.isCutscene = false;
     }
 
     public void Help()

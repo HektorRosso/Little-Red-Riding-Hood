@@ -41,7 +41,9 @@ public class DialogueManager : MonoBehaviour
 
     [Header("Wolf")]
     public Transform wolf;
+    public Transform disguisedWolf;
     public Animator wolfAnim;
+    public Animator disguisedWolfAnim;
     public List<Transform> wolfWaypoints = new List<Transform>();
 
     [Header("Lumberjack")]
@@ -58,6 +60,7 @@ public class DialogueManager : MonoBehaviour
     {
         motherAnim = mother.GetComponentInChildren<Animator>();
         wolfAnim = wolf.GetComponentInChildren<Animator>();
+        disguisedWolfAnim = disguisedWolf.GetComponentInChildren<Animator>();
         lumberjackAnim = lumberjack.GetComponentInChildren<Animator>();
         grandmotherAnim = grandmother.GetComponentInChildren<Animator>();
 
