@@ -831,7 +831,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioSource: {fileID: 7331021641075137401}
   pickup: {fileID: 8300000, guid: d4a3020119e224d4fb405c268714045e, type: 3}
-  putdown: {fileID: 8300000, guid: 384b220e080be1048ae0513b6693e1dc, type: 3}
+  putdown: {fileID: 0}
 --- !u!82 &7331021641075137401
 AudioSource:
   m_ObjectHideFlags: 0
