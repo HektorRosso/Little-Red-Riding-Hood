@@ -1,5 +1,4 @@
 using System.Collections;
-using UnityEditor;
 using UnityEngine;
 
 public class Cutscenes : MonoBehaviour
@@ -143,6 +142,90 @@ public class Cutscenes : MonoBehaviour
         anim.SetBool("motherWave", false);
 
         yield return null;
+
+        dialogueManager.isCutscene = false;
+    }
+
+    public void Hello()
+    {
+        StartCoroutine(HelloLittleGirl());
+    }
+
+    public IEnumerator HelloLittleGirl()
+    {
+        dialogueManager.isCutscene = true;
+
+        Animator anim = dialogueManager.wolfAnim;
+
+        anim.SetBool("wolfWalk", true);
+
+        yield return StartCoroutine(WolfWalk());
+
+        yield return StartCoroutine(WolfWalk());
+
+        yield return StartCoroutine(PlayVoiceline(wolf1));
+
+        yield return StartCoroutine(PlayVoiceline(littleRedRidingHood2));
+
+        yield return StartCoroutine(PlayVoiceline(wolf2));
+
+        yield return StartCoroutine(WolfWalk());
+
+        yield return StartCoroutine(WolfWalk());
+
+        anim.SetBool("wolfWalk", false);
+        anim.SetBool("wolfPoint", true);
+
+        yield return StartCoroutine(PlayVoiceline(wolf3));
+
+        anim.SetBool("wolfPoint", false);
+        anim.SetBool("wolfWalk", true);
+
+        yield return StartCoroutine(WolfWalk());
+
+        yield return StartCoroutine(WolfWalk());
+
+        anim.SetBool("wolfWalk", false);
+        anim.SetBool("wolfWave", true);
+
+        yield return StartCoroutine(PlayVoiceline(wolf4));
+
+        anim.SetBool("wolfWave", false);
+
+        yield return null;
+
+        dialogueManager.isCutscene = false;
+    }
+
+    public void Grandma()
+    {
+        StartCoroutine(HelloGrandmother());
+    }
+
+    IEnumerator HelloGrandmother()
+    {
+        dialogueManager.isCutscene = true;
+
+        Animator anim = dialogueManager.disguisedWolfAnim;
+
+        yield return StartCoroutine(PlayVoiceline(littleRedRidingHood3));
+
+        yield return StartCoroutine(PlayVoiceline(wolf5));
+
+        yield return StartCoroutine(PlayVoiceline(littleRedRidingHood4));
+
+        yield return StartCoroutine(PlayVoiceline(wolf6));
+
+        yield return StartCoroutine(PlayVoiceline(littleRedRidingHood5));
+
+        anim.SetBool("wolfStandUp", true);
+
+        yield return StartCoroutine(PlayVoiceline(wolf7));
+
+        anim.SetBool("wolfStandUp", false);
+        anim.SetBool("wolfIdle", true);
+
+        yield return StartCoroutine(PlayVoiceline(littleRedRidingHood6));
 
         dialogueManager.isCutscene = false;
     }

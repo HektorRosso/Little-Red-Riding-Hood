@@ -14,6 +14,14 @@ public class TheEnd : MonoBehaviour
     public CanvasGroup canvasGroup;
     public Transform player;
 
+    public AudioSource audioSource;
+    public AudioClip music;
+
+    void Start()
+    {
+        audioSource = GetComponent<AudioSource>();
+    }
+
     void Update()
     {
         if (dialogueManager.theEnd.activeInHierarchy == true && !hasFadedIn)
@@ -70,6 +78,7 @@ public class TheEnd : MonoBehaviour
 
     IEnumerator FadeIn()
     {
+        audioSource.PlayOneShot(music);
         yield return StartCoroutine(FadeCanvasGroup(1f, 1f));
         yield return StartCoroutine(Wait(2f));
     }

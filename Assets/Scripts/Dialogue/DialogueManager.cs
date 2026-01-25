@@ -73,12 +73,12 @@ public class DialogueManager : MonoBehaviour
 
         if (isWolfWalking)
         {
-            isWolfWalking = MoveTowardsWaypoint(wolf, wolfWaypoints, ref wolfWaypointIndex, ref wolfAtWaypoint, ref isWolfWalking, 1);
+            isWolfWalking = MoveTowardsWaypoint(wolf, wolfWaypoints, ref wolfWaypointIndex, ref wolfAtWaypoint, ref isWolfWalking, 2);
         }
 
         if (isWolfRunning)
         {
-            isWolfRunning = MoveTowardsWaypoint(wolf, wolfWaypoints, ref wolfWaypointIndex, ref wolfAtWaypoint, ref isWolfRunning, 2);
+            isWolfRunning = MoveTowardsWaypoint(disguisedWolf, wolfWaypoints, ref wolfWaypointIndex, ref wolfAtWaypoint, ref isWolfRunning, 4);
         }
 
         if (isLumberjackWalking)
@@ -88,7 +88,7 @@ public class DialogueManager : MonoBehaviour
 
         if (isLumberjackRunning)
         {
-            isLumberjackRunning = MoveTowardsWaypoint(lumberjack, lumberjackWaypoints, ref lumberjackWaypointIndex, ref lumberjackAtWaypoint, ref isLumberjackRunning, 2);
+            isLumberjackRunning = MoveTowardsWaypoint(lumberjack, lumberjackWaypoints, ref lumberjackWaypointIndex, ref lumberjackAtWaypoint, ref isLumberjackRunning, 4);
         }
 
         if (isGrandmotherMoving)
