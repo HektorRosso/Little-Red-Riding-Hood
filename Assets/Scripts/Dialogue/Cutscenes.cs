@@ -4,6 +4,7 @@ using UnityEngine;
 public class Cutscenes : MonoBehaviour
 {
     public DialogueManager dialogueManager;
+    public TriggerCutscene triggerCutscene;
     public AudioSource audioSource;
     private bool firstPickup;
     public GameObject wig;
@@ -227,12 +228,17 @@ public class Cutscenes : MonoBehaviour
 
         yield return StartCoroutine(PlayVoiceline(littleRedRidingHood6));
 
+        triggerCutscene.lumberjackStartFirstMeetingPoint.SetActive(true);
+
+        triggerCutscene.lumberjackBorder1.SetActive(true);
+
+        triggerCutscene.lumberjackBorder2.SetActive(true);
+
         dialogueManager.isCutscene = false;
     }
 
     public void Help()
     {
-        Dialogue(littleRedRidingHood7);
         StartCoroutine(Coming());
     }
 
@@ -241,6 +247,8 @@ public class Cutscenes : MonoBehaviour
         dialogueManager.isCutscene = true;
 
         Animator anim = dialogueManager.lumberjackAnim;
+
+        yield return StartCoroutine(PlayVoiceline(littleRedRidingHood7));
 
         anim.SetBool("lumberjackChopping", false);
         anim.SetBool("lumberjackWalk", true);
@@ -256,6 +264,12 @@ public class Cutscenes : MonoBehaviour
         anim.SetBool("lumberjackWalk", true);
 
         yield return StartCoroutine(LumberjackWalk());
+
+        triggerCutscene.lumberjackEndFirstMeetingPoint.SetActive(true);
+
+        triggerCutscene.lumberjackBorder1.SetActive(true);
+
+        triggerCutscene.lumberjackBorder2.SetActive(true);
 
         dialogueManager.isCutscene = false;
     }

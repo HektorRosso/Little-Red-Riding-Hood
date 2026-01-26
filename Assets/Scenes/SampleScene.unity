@@ -2020,6 +2020,114 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 129527388}
   m_CullTransparentMesh: 1
+--- !u!1 &129558268
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 129558269}
+  - component: {fileID: 129558272}
+  - component: {fileID: 129558271}
+  - component: {fileID: 129558270}
+  m_Layer: 0
+  m_Name: Lumberjack Border 2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &129558269
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 129558268}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: -0.5, z: 0, w: 0.8660254}
+  m_LocalPosition: {x: 4.6, y: 7.25, z: 77.5}
+  m_LocalScale: {x: 1, y: 100, z: 50}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1394238956}
+  m_LocalEulerAnglesHint: {x: 0, y: -60, z: 0}
+--- !u!65 &129558270
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 129558268}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &129558271
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 129558268}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: c311caa6f74149c40beaed44a815d8d7, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &129558272
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 129558268}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &133440875
 GameObject:
   m_ObjectHideFlags: 0
@@ -3662,32 +3770,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2013219018}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &222102445 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: -6217103641267268371, guid: 65e32ea218758004ea1bcaf572dcc7fc, type: 3}
-  m_PrefabInstance: {fileID: 823708887}
-  m_PrefabAsset: {fileID: 0}
---- !u!65 &222102449
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 222102445}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.16175304, y: 0.0086367745, z: 0.0086367745}
-  m_Center: {x: 0, y: 0.000000014901161, z: -0.00000023841858}
 --- !u!1 &225847614
 GameObject:
   m_ObjectHideFlags: 0
@@ -6582,6 +6664,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueManager: {fileID: 336524851}
+  triggerCutscene: {fileID: 1203746418}
   audioSource: {fileID: 385802885}
   wig: {fileID: 1859923813}
   mother1: {fileID: 8300000, guid: c7c714f198a96624c939838e81f357db, type: 3}
@@ -7038,6 +7121,11 @@ MonoBehaviour:
   cutscenes: {fileID: 385802886}
   wolfEndFirstMeetingPoint: {fileID: 782322293}
   disguisedWolfEndFirstMeetingPoint: {fileID: 0}
+  lumberjackStartFirstMeetingPoint: {fileID: 0}
+  lumberjackEndFirstMeetingPoint: {fileID: 0}
+  lumberjackBorder1: {fileID: 0}
+  lumberjackBorder2: {fileID: 0}
+  grandmotherMeetingPoint: {fileID: 0}
 --- !u!1 &406043770 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7390359291511533714, guid: 73fce8072b1d0a848a15dfcb8d75203c, type: 3}
@@ -10270,6 +10358,11 @@ MonoBehaviour:
   cutscenes: {fileID: 385802886}
   wolfEndFirstMeetingPoint: {fileID: 0}
   disguisedWolfEndFirstMeetingPoint: {fileID: 1249143252}
+  lumberjackStartFirstMeetingPoint: {fileID: 0}
+  lumberjackEndFirstMeetingPoint: {fileID: 0}
+  lumberjackBorder1: {fileID: 0}
+  lumberjackBorder2: {fileID: 0}
+  grandmotherMeetingPoint: {fileID: 0}
 --- !u!65 &612266704
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10888,7 +10981,7 @@ Transform:
   m_GameObject: {fileID: 648263125}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 9, y: 0, z: 70}
+  m_LocalPosition: {x: 6.5, y: 0, z: 72.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -11847,6 +11940,114 @@ MonoBehaviour:
   m_Image: {fileID: 2018379307}
   m_CanvasGroup: {fileID: 0}
   m_IgnoreAlpha: 0
+--- !u!1 &724530382
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 724530383}
+  - component: {fileID: 724530386}
+  - component: {fileID: 724530385}
+  - component: {fileID: 724530384}
+  m_Layer: 0
+  m_Name: Lumberjack Border 1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &724530383
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 724530382}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: -0.5555702, z: 0, w: 0.8314697}
+  m_LocalPosition: {x: 0, y: 7.25, z: 67.5}
+  m_LocalScale: {x: 1, y: 100, z: 50}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1394238956}
+  m_LocalEulerAnglesHint: {x: 0, y: -67.5, z: 0}
+--- !u!65 &724530384
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 724530382}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &724530385
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 724530382}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: c311caa6f74149c40beaed44a815d8d7, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &724530386
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 724530382}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &730262804 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -7153747352723811882, guid: 65e32ea218758004ea1bcaf572dcc7fc, type: 3}
@@ -13708,9 +13909,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -5396759439453668167, guid: 65e32ea218758004ea1bcaf572dcc7fc, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1929616785}
-    - targetCorrespondingSourceObject: {fileID: -6217103641267268371, guid: 65e32ea218758004ea1bcaf572dcc7fc, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 222102449}
     - targetCorrespondingSourceObject: {fileID: 2790411409610782809, guid: 65e32ea218758004ea1bcaf572dcc7fc, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1311733929}
@@ -19324,13 +19522,14 @@ GameObject:
   - component: {fileID: 1203746417}
   - component: {fileID: 1203746416}
   - component: {fileID: 1203746415}
+  - component: {fileID: 1203746418}
   m_Layer: 0
   m_Name: LumberjackStartFirstMeetingPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1203746414
 Transform:
   m_ObjectHideFlags: 0
@@ -19340,7 +19539,7 @@ Transform:
   m_GameObject: {fileID: 1203746413}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0.19509031, z: 0, w: 0.98078537}
-  m_LocalPosition: {x: 24.66, y: 7.25, z: 63.44}
+  m_LocalPosition: {x: 24, y: 7.25, z: 61.53}
   m_LocalScale: {x: 1, y: 100, z: 10}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -19420,6 +19619,26 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1203746413}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1203746418
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1203746413}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae3a07e967c514a40a1af1b3e97e9d29, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cutscenes: {fileID: 385802886}
+  wolfEndFirstMeetingPoint: {fileID: 0}
+  disguisedWolfEndFirstMeetingPoint: {fileID: 0}
+  lumberjackStartFirstMeetingPoint: {fileID: 1203746413}
+  lumberjackEndFirstMeetingPoint: {fileID: 1388563752}
+  lumberjackBorder1: {fileID: 724530382}
+  lumberjackBorder2: {fileID: 129558268}
+  grandmotherMeetingPoint: {fileID: 0}
 --- !u!1 &1215012699
 GameObject:
   m_ObjectHideFlags: 0
@@ -21976,7 +22195,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1388563753
 Transform:
   m_ObjectHideFlags: 0
@@ -21986,7 +22205,7 @@ Transform:
   m_GameObject: {fileID: 1388563752}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0.19509031, z: 0, w: 0.98078537}
-  m_LocalPosition: {x: 24.66, y: 7.25, z: 63.44}
+  m_LocalPosition: {x: 24, y: 7.25, z: 63.44}
   m_LocalScale: {x: 1, y: 100, z: 10}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -22179,6 +22398,8 @@ Transform:
   - {fileID: 503633506}
   - {fileID: 544504472}
   - {fileID: 319065556}
+  - {fileID: 724530383}
+  - {fileID: 129558269}
   m_Father: {fileID: 385802887}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1397080685 stripped
