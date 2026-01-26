@@ -313,6 +313,37 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.008636773, y: 0.0086367745, z: 0.1146183}
   m_Center: {x: -0.07519839, y: 0.021622326, z: -0.000244217}
+--- !u!1 &26851186
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 26851187}
+  m_Layer: 0
+  m_Name: Lumberjack Waypoint 3 (Run)
+  m_TagString: Untagged
+  m_Icon: {fileID: -5487077368411116049, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &26851187
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 26851186}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 11, y: 0, z: 5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 774531556}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &27584628 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8822708609181180956, guid: 65e32ea218758004ea1bcaf572dcc7fc, type: 3}
@@ -1028,12 +1059,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -1898363450414258072, guid: 73fce8072b1d0a848a15dfcb8d75203c, type: 3}
       insertIndex: -1
       addedObject: {fileID: 13986285}
-    - targetCorrespondingSourceObject: {fileID: -5869190799242761347, guid: 73fce8072b1d0a848a15dfcb8d75203c, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 900246621}
-    - targetCorrespondingSourceObject: {fileID: 8574544628137807630, guid: 73fce8072b1d0a848a15dfcb8d75203c, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 735703211}
     - targetCorrespondingSourceObject: {fileID: 1029403268618973650, guid: 73fce8072b1d0a848a15dfcb8d75203c, type: 3}
       insertIndex: -1
       addedObject: {fileID: 217730696}
@@ -2048,8 +2073,8 @@ Transform:
   m_GameObject: {fileID: 129558268}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: -0.5, z: 0, w: 0.8660254}
-  m_LocalPosition: {x: 4.6, y: 7.25, z: 77.5}
-  m_LocalScale: {x: 1, y: 100, z: 50}
+  m_LocalPosition: {x: 4.5, y: 7.25, z: 77.25}
+  m_LocalScale: {x: 1, y: 100, z: 60}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1394238956}
@@ -4491,7 +4516,7 @@ Transform:
   m_GameObject: {fileID: 263485038}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 38.5, y: 0, z: 57}
+  m_LocalPosition: {x: 10, y: 0, z: 67.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5829,12 +5854,16 @@ MonoBehaviour:
   - {fileID: 63162748}
   - {fileID: 236864849}
   - {fileID: 1987448026}
-  - {fileID: 221988835}
+  - {fileID: 1239432056}
+  - {fileID: 1976010676}
+  - {fileID: 1533689053}
   lumberjack: {fileID: 1885150962}
   lumberjackAnim: {fileID: 1885150964}
   lumberjackWaypoints:
   - {fileID: 263485039}
   - {fileID: 648263126}
+  - {fileID: 1198678862}
+  - {fileID: 26851187}
   grandmother: {fileID: 1382507408}
   grandmotherAnim: {fileID: 1382507409}
   grandmotherWaypoints:
@@ -6156,6 +6185,59 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f47ad6ac315a3ea428b59e2cac6f2a2e, type: 3}
+--- !u!1 &358734471
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 358734472}
+  - component: {fileID: 358734473}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &358734472
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 358734471}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.37533024, y: 0.18023993, z: -0.07465782, w: 0.90612745}
+  m_LocalPosition: {x: 2.021, y: 0.446, z: 70.052}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 45, y: 22.5, z: 0}
+--- !u!65 &358734473
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 358734471}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2, y: 1, z: 1.36}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &358945039 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1571281029781236045, guid: 65e32ea218758004ea1bcaf572dcc7fc, type: 3}
@@ -6666,32 +6748,33 @@ MonoBehaviour:
   dialogueManager: {fileID: 336524851}
   triggerCutscene: {fileID: 1203746418}
   audioSource: {fileID: 385802885}
+  basket: {fileID: 1658619200}
   wig: {fileID: 1859923813}
   mother1: {fileID: 8300000, guid: c7c714f198a96624c939838e81f357db, type: 3}
   mother2: {fileID: 8300000, guid: 303bb9084c35c4e4ca463196648adb40, type: 3}
   mother3: {fileID: 8300000, guid: 5fa67758de20071408bedb2980489924, type: 3}
   mother4: {fileID: 8300000, guid: 48d611cc2bbfcd6498588e5d00aadfc6, type: 3}
-  littleRedRidingHood1: {fileID: 0}
+  littleRedRidingHood1: {fileID: 8300000, guid: 308c8b2540e4af7448ff250ee34f0366, type: 3}
   littleRedRidingHood2: {fileID: 8300000, guid: 9fef785272ec4af419bfd708a148d5cb, type: 3}
-  littleRedRidingHood3: {fileID: 8300000, guid: e2a8210bf0caac44fb458f2d0b1a9f84, type: 3}
+  littleRedRidingHood3: {fileID: 8300000, guid: 952c4e59d942f6a44b80729d5d162149, type: 3}
   littleRedRidingHood4: {fileID: 8300000, guid: 368c1c871f658914ca647b723b9fac19, type: 3}
   littleRedRidingHood5: {fileID: 8300000, guid: b37976826aca6bd438161fd993e4b9a8, type: 3}
   littleRedRidingHood6: {fileID: 8300000, guid: b18d485ceb4261b4699e51de7f12bb62, type: 3}
   littleRedRidingHood7: {fileID: 8300000, guid: 596c0236956ce7242ad909ff22fc453d, type: 3}
   littleRedRidingHood8: {fileID: 8300000, guid: bb013cf2b8d8dfa4b8670905a424f709, type: 3}
-  wolf1: {fileID: 8300000, guid: af73df0f378291549894855c41263796, type: 3}
+  wolf1: {fileID: 8300000, guid: 3e314797f0caa5a4594dd3adb3104bae, type: 3}
   wolf2: {fileID: 8300000, guid: e206bba19cd407e408546ef7ab1666d6, type: 3}
   wolf3: {fileID: 8300000, guid: 23f31cd693a802f4591e52373697845b, type: 3}
   wolf4: {fileID: 8300000, guid: 44314572ea878d744918c50cc076c097, type: 3}
   wolf5: {fileID: 8300000, guid: 16bece83f27908f44a3085cb81dd90f4, type: 3}
   wolf6: {fileID: 8300000, guid: c1b23f4928cfd6942ac78f2b49629be2, type: 3}
   wolf7: {fileID: 8300000, guid: 4c6601ed752b4834c8fd19c2fba7a89f, type: 3}
-  wolf8: {fileID: 8300000, guid: 2b3a171c3ce010847bacabb940c61a36, type: 3}
+  wolf8: {fileID: 8300000, guid: a132f13125201404b85fb85010788a34, type: 3}
   lumberjack1: {fileID: 8300000, guid: e7a66aec9aeba1547beb84847f68fa29, type: 3}
   lumberjack2: {fileID: 8300000, guid: 34e4044c5bdf2c6419f9304d2ca8aa26, type: 3}
   grandmother1: {fileID: 8300000, guid: 68373c138f040ff46bb94f10726dfb86, type: 3}
-  grandmother2: {fileID: 0}
-  grandmother3: {fileID: 0}
+  grandmother2: {fileID: 8300000, guid: a74ee3a7b5f413e4dbb46e068da32091, type: 3}
+  grandmother3: {fileID: 8300000, guid: 7218491258d8cb14ab068312404648f4, type: 3}
 --- !u!4 &385802887
 Transform:
   m_ObjectHideFlags: 0
@@ -7125,7 +7208,6 @@ MonoBehaviour:
   lumberjackEndFirstMeetingPoint: {fileID: 0}
   lumberjackBorder1: {fileID: 0}
   lumberjackBorder2: {fileID: 0}
-  grandmotherMeetingPoint: {fileID: 0}
 --- !u!1 &406043770 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7390359291511533714, guid: 73fce8072b1d0a848a15dfcb8d75203c, type: 3}
@@ -10358,11 +10440,10 @@ MonoBehaviour:
   cutscenes: {fileID: 385802886}
   wolfEndFirstMeetingPoint: {fileID: 0}
   disguisedWolfEndFirstMeetingPoint: {fileID: 1249143252}
-  lumberjackStartFirstMeetingPoint: {fileID: 0}
-  lumberjackEndFirstMeetingPoint: {fileID: 0}
-  lumberjackBorder1: {fileID: 0}
-  lumberjackBorder2: {fileID: 0}
-  grandmotherMeetingPoint: {fileID: 0}
+  lumberjackStartFirstMeetingPoint: {fileID: 1203746413}
+  lumberjackEndFirstMeetingPoint: {fileID: 1388563752}
+  lumberjackBorder1: {fileID: 724530382}
+  lumberjackBorder2: {fileID: 129558268}
 --- !u!65 &612266704
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10981,7 +11062,7 @@ Transform:
   m_GameObject: {fileID: 648263125}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.5, y: 0, z: 72.5}
+  m_LocalPosition: {x: 5, y: 0, z: 67.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -11969,7 +12050,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: -0.5555702, z: 0, w: 0.8314697}
   m_LocalPosition: {x: 0, y: 7.25, z: 67.5}
-  m_LocalScale: {x: 1, y: 100, z: 50}
+  m_LocalScale: {x: 1, y: 100, z: 60}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1394238956}
@@ -12392,32 +12473,6 @@ Transform:
   - {fileID: 1388563753}
   m_Father: {fileID: 385802887}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &735703207 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8574544628137807630, guid: 73fce8072b1d0a848a15dfcb8d75203c, type: 3}
-  m_PrefabInstance: {fileID: 82260018}
-  m_PrefabAsset: {fileID: 0}
---- !u!65 &735703211
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 735703207}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.020000001, y: 0.019999998, z: 0.020000014}
-  m_Center: {x: 0.0000000013969838, y: 0.009999999, z: -0.0000000066310166}
 --- !u!1 &743986060
 GameObject:
   m_ObjectHideFlags: 0
@@ -12760,6 +12815,8 @@ Transform:
   m_Children:
   - {fileID: 263485039}
   - {fileID: 648263126}
+  - {fileID: 1198678862}
+  - {fileID: 26851187}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &782322293
@@ -15263,32 +15320,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 896662536}
   m_CullTransparentMesh: 1
---- !u!1 &900246617 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: -5869190799242761347, guid: 73fce8072b1d0a848a15dfcb8d75203c, type: 3}
-  m_PrefabInstance: {fileID: 82260018}
-  m_PrefabAsset: {fileID: 0}
---- !u!65 &900246621
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 900246617}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.020000001, y: 0.019999998, z: 0.020000014}
-  m_Center: {x: 0.000000016298145, y: 0.009999999, z: -0.0000000066310166}
 --- !u!1 &908058645 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 110388424864667768, guid: 65e32ea218758004ea1bcaf572dcc7fc, type: 3}
@@ -18869,6 +18900,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: b03dbaa00e1b2ae4087a1767cd481092, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1177304368}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: b03dbaa00e1b2ae4087a1767cd481092, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1177304373}
   m_SourcePrefab: {fileID: 100100000, guid: b03dbaa00e1b2ae4087a1767cd481092, type: 3}
 --- !u!1 &1177304364 stripped
 GameObject:
@@ -19073,9 +19107,9 @@ Rigidbody:
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
-  m_Constraints: 126
+  m_Constraints: 0
   m_CollisionDetection: 0
 --- !u!65 &1177304371
 BoxCollider:
@@ -19098,6 +19132,23 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.09, y: 0.125, z: 0.06}
   m_Center: {x: 0, y: 0.0625, z: 0.01}
+--- !u!111 &1177304373
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1177304364}
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Animation: {fileID: 1827226128182048838, guid: b03dbaa00e1b2ae4087a1767cd481092, type: 3}
+  m_Animations:
+  - {fileID: 1827226128182048838, guid: b03dbaa00e1b2ae4087a1767cd481092, type: 3}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_UpdateMode: 0
+  m_CullingType: 0
 --- !u!1001 &1180498687
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19331,6 +19382,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1194192234}
   m_CullTransparentMesh: 1
+--- !u!1 &1198678861
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1198678862}
+  m_Layer: 0
+  m_Name: Lumberjack Waypoint 2 (Run)
+  m_TagString: Untagged
+  m_Icon: {fileID: -5487077368411116049, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1198678862
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1198678861}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 11, y: 0, z: 65}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 774531556}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1198760459
 GameObject:
   m_ObjectHideFlags: 0
@@ -19539,7 +19621,7 @@ Transform:
   m_GameObject: {fileID: 1203746413}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0.19509031, z: 0, w: 0.98078537}
-  m_LocalPosition: {x: 24, y: 7.25, z: 61.53}
+  m_LocalPosition: {x: 8, y: 7.25, z: 69}
   m_LocalScale: {x: 1, y: 100, z: 10}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -19638,7 +19720,6 @@ MonoBehaviour:
   lumberjackEndFirstMeetingPoint: {fileID: 1388563752}
   lumberjackBorder1: {fileID: 724530382}
   lumberjackBorder2: {fileID: 129558268}
-  grandmotherMeetingPoint: {fileID: 0}
 --- !u!1 &1215012699
 GameObject:
   m_ObjectHideFlags: 0
@@ -19918,6 +19999,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1225964133}
   m_CullTransparentMesh: 1
+--- !u!1 &1239432055
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1239432056}
+  m_Layer: 0
+  m_Name: Wolf Waypoint 5 (Run)
+  m_TagString: Untagged
+  m_Icon: {fileID: 4162164826716764455, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1239432056
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1239432055}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1, y: 0, z: 67.5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2013219018}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1242535021
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21571,6 +21683,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7867393351944209716, guid: 77e7c27b2c5525e4aa8cc9f99d654486, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7917674758246323947, guid: 77e7c27b2c5525e4aa8cc9f99d654486, type: 3}
       propertyPath: m_LocalPosition.y
       value: 0.375
@@ -22205,7 +22321,7 @@ Transform:
   m_GameObject: {fileID: 1388563752}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0.19509031, z: 0, w: 0.98078537}
-  m_LocalPosition: {x: 24, y: 7.25, z: 63.44}
+  m_LocalPosition: {x: 8, y: 7.25, z: 69}
   m_LocalScale: {x: 1, y: 100, z: 10}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -24395,6 +24511,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1533437182}
   m_CullTransparentMesh: 1
+--- !u!1 &1533689052
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1533689053}
+  m_Layer: 0
+  m_Name: Wolf Waypoint 7 (Run)
+  m_TagString: Untagged
+  m_Icon: {fileID: 4162164826716764455, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1533689053
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1533689052}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 11, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2013219018}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1533900678
 GameObject:
   m_ObjectHideFlags: 0
@@ -24913,6 +25060,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1577364811}
+  - component: {fileID: 1577364812}
   m_Layer: 0
   m_Name: DoorClosed
   m_TagString: Untagged
@@ -24938,6 +25086,27 @@ Transform:
   - {fileID: 2018768390}
   m_Father: {fileID: 594932514}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &1577364812
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1577364810}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.755, y: 1, z: 0.15}
+  m_Center: {x: 0.3, y: 0.06, z: 0}
 --- !u!1 &1583362664 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -4224054312215777309, guid: 73fce8072b1d0a848a15dfcb8d75203c, type: 3}
@@ -26042,7 +26211,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1658619201
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28587,27 +28756,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 4593bb237474e644983a28f030fa02a4, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 38.5
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 4593bb237474e644983a28f030fa02a4, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.5625
+      value: 0.82
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 4593bb237474e644983a28f030fa02a4, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 61.75
+      value: 83.75
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 4593bb237474e644983a28f030fa02a4, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: -0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 4593bb237474e644983a28f030fa02a4, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 4593bb237474e644983a28f030fa02a4, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 4593bb237474e644983a28f030fa02a4, type: 3}
       propertyPath: m_LocalRotation.z
@@ -28619,7 +28788,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 4593bb237474e644983a28f030fa02a4, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: 270
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 4593bb237474e644983a28f030fa02a4, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -29520,7 +29689,7 @@ BoxCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Size: {x: 0.0753666, y: 0.14791432, z: 0.003823371}
   m_Center: {x: 0.055, y: 0.00000022351742, z: -0.000022923923}
@@ -29541,7 +29710,7 @@ BoxCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Size: {x: 0.0753666, y: 0.14791432, z: 0.003823371}
   m_Center: {x: -0.055, y: 0.00000022351742, z: -0.000022923923}
@@ -30338,6 +30507,37 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1.25, y: 2.1336, z: 0.024999695}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &1976010675
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1976010676}
+  m_Layer: 0
+  m_Name: Wolf Waypoint 6 (Run)
+  m_TagString: Untagged
+  m_Icon: {fileID: 4162164826716764455, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1976010676
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1976010675}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 11, y: 0, z: 60}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2013219018}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1978820275
 GameObject:
   m_ObjectHideFlags: 0
@@ -31156,6 +31356,9 @@ Transform:
   - {fileID: 977099179}
   - {fileID: 63162748}
   - {fileID: 236864849}
+  - {fileID: 1239432056}
+  - {fileID: 1976010676}
+  - {fileID: 1533689053}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2013396299
@@ -31861,6 +32064,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2054196174}
+  - component: {fileID: 2054196175}
   m_Layer: 0
   m_Name: DoorClosed
   m_TagString: Untagged
@@ -31886,6 +32090,27 @@ Transform:
   - {fileID: 1609618960}
   m_Father: {fileID: 546148038}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &2054196175
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2054196173}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.755, y: 1, z: 0.15}
+  m_Center: {x: 0.3, y: 0.06, z: 0}
 --- !u!1 &2058965096
 GameObject:
   m_ObjectHideFlags: 0
@@ -35325,6 +35550,7 @@ SceneRoots:
   - {fileID: 336524852}
   - {fileID: 385802887}
   - {fileID: 807209510}
+  - {fileID: 358734472}
   - {fileID: 1883633445}
   - {fileID: 687711771}
   - {fileID: 823708887}

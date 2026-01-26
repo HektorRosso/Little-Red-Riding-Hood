@@ -14,28 +14,31 @@ public class TriggerCutscene : MonoBehaviour
     public GameObject lumberjackBorder1;
     public GameObject lumberjackBorder2;
 
-    public GameObject grandmotherMeetingPoint;
-
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player"))
+        if (!other.CompareTag("Player")) return;
+
+        if (gameObject.name == "WolfStartFirstMeetingPoint")
         {
-            if (gameObject.name == "WolfStartFirstMeetingPoint")
-                cutscenes.Hello();
-                wolfEndFirstMeetingPoint.SetActive(true);
-                gameObject.SetActive(false);
-
-            if (gameObject.name == "DisguisedWolfStartFirstMeetingPoint")
-                cutscenes.Grandma();
-                disguisedWolfEndFirstMeetingPoint.SetActive(true);
-                gameObject.SetActive(false);
-
-            if (gameObject.name == "LumberjackStartFirstMeetingPoint")
-                lumberjackStartFirstMeetingPoint.SetActive(false);
-                lumberjackBorder1.SetActive(false);
-                lumberjackBorder2.SetActive(false);
-                cutscenes.Help();
-                gameObject.SetActive(false);
+            cutscenes.Hello();
+            wolfEndFirstMeetingPoint.SetActive(true);
         }
+        else if (gameObject.name == "DisguisedWolfStartFirstMeetingPoint")
+        {
+            cutscenes.Grandma();
+            disguisedWolfEndFirstMeetingPoint.SetActive(true);
+            lumberjackStartFirstMeetingPoint.SetActive(true);
+            lumberjackBorder1.SetActive(true);
+            lumberjackBorder2.SetActive(true);
+        }
+        else if (gameObject.name == "LumberjackStartFirstMeetingPoint")
+        {
+            lumberjackStartFirstMeetingPoint.SetActive(false);
+            lumberjackBorder1.SetActive(false);
+            lumberjackBorder2.SetActive(false);
+            cutscenes.Help();
+        }
+
+        gameObject.SetActive(false);
     }
 }

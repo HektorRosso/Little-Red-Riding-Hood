@@ -83,12 +83,12 @@ public class DialogueManager : MonoBehaviour
 
         if (isLumberjackWalking)
         {
-            isLumberjackWalking = MoveTowardsWaypoint(lumberjack, lumberjackWaypoints, ref lumberjackWaypointIndex, ref lumberjackAtWaypoint, ref isLumberjackWalking, 2);
+            isLumberjackWalking = MoveTowardsWaypoint(lumberjack, lumberjackWaypoints, ref lumberjackWaypointIndex, ref lumberjackAtWaypoint, ref isLumberjackWalking, 3);
         }
 
         if (isLumberjackRunning)
         {
-            isLumberjackRunning = MoveTowardsWaypoint(lumberjack, lumberjackWaypoints, ref lumberjackWaypointIndex, ref lumberjackAtWaypoint, ref isLumberjackRunning, 4);
+            isLumberjackRunning = MoveTowardsWaypoint(lumberjack, lumberjackWaypoints, ref lumberjackWaypointIndex, ref lumberjackAtWaypoint, ref isLumberjackRunning, 2);
         }
 
         if (isGrandmotherMoving)

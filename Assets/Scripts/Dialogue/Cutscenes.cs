@@ -7,6 +7,8 @@ public class Cutscenes : MonoBehaviour
     public TriggerCutscene triggerCutscene;
     public AudioSource audioSource;
     private bool firstPickup;
+
+    public GameObject basket;
     public GameObject wig;
 
     [Header("Mother")]
@@ -122,6 +124,8 @@ public class Cutscenes : MonoBehaviour
 
         anim.SetBool("motherPoint", false);
 
+        basket.SetActive(true);
+
         yield return null;
     }
 
@@ -228,12 +232,6 @@ public class Cutscenes : MonoBehaviour
 
         yield return StartCoroutine(PlayVoiceline(littleRedRidingHood6));
 
-        triggerCutscene.lumberjackStartFirstMeetingPoint.SetActive(true);
-
-        triggerCutscene.lumberjackBorder1.SetActive(true);
-
-        triggerCutscene.lumberjackBorder2.SetActive(true);
-
         dialogueManager.isCutscene = false;
     }
 
@@ -246,24 +244,50 @@ public class Cutscenes : MonoBehaviour
     {
         dialogueManager.isCutscene = true;
 
-        Animator anim = dialogueManager.lumberjackAnim;
+        Animator lumberjackanim = dialogueManager.lumberjackAnim;
+        Animator wolfanim = dialogueManager.disguisedWolfAnim;
 
         yield return StartCoroutine(PlayVoiceline(littleRedRidingHood7));
 
-        anim.SetBool("lumberjackChopping", false);
-        anim.SetBool("lumberjackWalk", true);
+        lumberjackanim.SetBool("lumberjackChopping", false);
+        lumberjackanim.SetBool("lumberjackWalk", true);
 
         yield return StartCoroutine(LumberjackWalk());
 
-        anim.SetBool("lumberjackWalk", false);
-        anim.SetBool("lumberjackTurn", true);
+        lumberjackanim.SetBool("lumberjackWalk", false);
+        lumberjackanim.SetBool("lumberjackTurn", true);
 
         yield return StartCoroutine(PlayVoiceline(lumberjack1));
 
-        anim.SetBool("lumberjackTurn", false);
-        anim.SetBool("lumberjackWalk", true);
+        lumberjackanim.SetBool("lumberjackTurn", false);
+        lumberjackanim.SetBool("lumberjackWalk", true);
 
         yield return StartCoroutine(LumberjackWalk());
+
+        lumberjackanim.SetBool("lumberjackWalk", false);
+        lumberjackanim.SetBool("lumberjackTurn", true);
+
+        yield return StartCoroutine(PlayVoiceline(lumberjack2));
+
+        wig.SetActive(false);
+
+        Dialogue(wolf8);
+
+        wolfanim.SetBool("wolfIdle", false);
+        wolfanim.SetBool("wolfRun", true);
+
+        yield return StartCoroutine(WolfRun());
+
+        Running(WolfRun());
+
+        lumberjackanim.SetBool("lumberjackTurn", false);
+        lumberjackanim.SetBool("lumberjackRun", true);
+
+        yield return Run(LumberjackRun());
+
+        Running(Run(WolfRun()));
+
+        yield return Run(LumberjackRun());
 
         triggerCutscene.lumberjackEndFirstMeetingPoint.SetActive(true);
 
