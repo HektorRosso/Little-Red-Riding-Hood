@@ -5,6 +5,8 @@ public class DialogueManager : MonoBehaviour
 {
     public GameObject move;
     public Cutscenes cutscenes;
+    public GameObject basket;
+    public GameObject mainMenu;
 
     [HideInInspector]
     public bool isCutscene;
@@ -29,11 +31,6 @@ public class DialogueManager : MonoBehaviour
     private int wolfWaypointIndex;
     private int lumberjackWaypointIndex;
     private int grandmotherWaypointIndex;
-
-    [Header("UI")]
-    public GameObject mainMenu;
-    public GameObject theEnd;
-    public GameObject credits;
 
     [Header("Mother")]
     public Transform mother;
@@ -78,7 +75,7 @@ public class DialogueManager : MonoBehaviour
 
         if (isWolfRunning)
         {
-            isWolfRunning = MoveTowardsWaypoint(disguisedWolf, wolfWaypoints, ref wolfWaypointIndex, ref wolfAtWaypoint, ref isWolfRunning, 4);
+            isWolfRunning = MoveTowardsWaypoint(disguisedWolf, wolfWaypoints, ref wolfWaypointIndex, ref wolfAtWaypoint, ref isWolfRunning, 10);
         }
 
         if (isLumberjackWalking)
@@ -88,7 +85,7 @@ public class DialogueManager : MonoBehaviour
 
         if (isLumberjackRunning)
         {
-            isLumberjackRunning = MoveTowardsWaypoint(lumberjack, lumberjackWaypoints, ref lumberjackWaypointIndex, ref lumberjackAtWaypoint, ref isLumberjackRunning, 2);
+            isLumberjackRunning = MoveTowardsWaypoint(lumberjack, lumberjackWaypoints, ref lumberjackWaypointIndex, ref lumberjackAtWaypoint, ref isLumberjackRunning, 8);
         }
 
         if (isGrandmotherMoving)
@@ -104,7 +101,7 @@ public class DialogueManager : MonoBehaviour
 
         grandmotherAnim.SetBool("grandmotherWalk", isGrandmotherMoving);
 
-        if (isCutscene == true || isMoving || mainMenu.activeInHierarchy == true || theEnd.activeInHierarchy == true)
+        if (isCutscene == true || isMoving || mainMenu.activeInHierarchy == true || basket.activeInHierarchy == false)
         {
             move.SetActive(false);
         }

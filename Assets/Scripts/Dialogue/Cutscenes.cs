@@ -289,6 +289,8 @@ public class Cutscenes : MonoBehaviour
 
         yield return Run(LumberjackRun());
 
+        yield return StartCoroutine(PlayVoiceline(grandmother1));
+
         triggerCutscene.lumberjackEndFirstMeetingPoint.SetActive(true);
 
         triggerCutscene.lumberjackBorder1.SetActive(true);

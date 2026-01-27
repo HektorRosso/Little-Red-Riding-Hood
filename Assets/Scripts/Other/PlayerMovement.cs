@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 using System.Collections;
+using UnityEditor.VersionControl;
 
 public class VRPlayerAnimation : MonoBehaviour
 {
@@ -60,7 +61,11 @@ public class VRPlayerAnimation : MonoBehaviour
         UpdateGroundType();
         UpdateAmbience();
 
-        if (dialogueManager != null && (dialogueManager.isCutscene || dialogueManager.isMoving || dialogueManager.mainMenu.activeInHierarchy == true || dialogueManager.theEnd.activeInHierarchy == true))
+        if (dialogueManager != null && 
+            (dialogueManager.isCutscene ||
+            dialogueManager.isMoving ||
+            dialogueManager.mainMenu.activeInHierarchy == true
+            || dialogueManager.basket.activeInHierarchy == false))
         {
             StopWalking();
             return;

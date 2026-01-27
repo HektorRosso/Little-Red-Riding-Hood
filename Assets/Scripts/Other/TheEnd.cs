@@ -10,7 +10,6 @@ public class TheEnd : MonoBehaviour
     private bool hasFadedIn;
     private bool hasFadedOut;
 
-    public DialogueManager dialogueManager;
     public CanvasGroup canvasGroup;
     public Transform player;
 
@@ -20,16 +19,12 @@ public class TheEnd : MonoBehaviour
     void Start()
     {
         audioSource = GetComponent<AudioSource>();
+        hasFadedIn = true;
+        StartCoroutine(FadeIn());
     }
 
     void Update()
     {
-        if (dialogueManager.theEnd.activeInHierarchy == true && !hasFadedIn)
-        {
-            hasFadedIn = true;
-            StartCoroutine(FadeIn());
-        }
-
         if (hasWaited)
             Scroll();
     }
@@ -65,7 +60,7 @@ public class TheEnd : MonoBehaviour
 
     void Scroll()
     {
-        if (transform.position.y < player.transform.position.y + 4.75f)
+        if (transform.position.y < player.transform.position.y + 5.5f)
         {
             transform.position += Vector3.up * scrollSpeed * Time.deltaTime;
         }

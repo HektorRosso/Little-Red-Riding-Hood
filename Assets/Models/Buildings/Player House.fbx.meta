@@ -14,6 +14,16 @@ ModelImporter:
       assembly: UnityEngine.CoreModule
       name: Logs
     second: {fileID: 2100000, guid: e3164ba69c61ebc4ab1d2686dfe74e35, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Saucepan
+    second: {fileID: 2100000, guid: 19d43e0f337c911468e288c664d1f146, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Stove
+    second: {fileID: 2100000, guid: f15814e216e0ac249b3ed4d89c1181d1, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
