@@ -1,7 +1,5 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
-using System.Collections;
-using UnityEditor.VersionControl;
 
 public class VRPlayerAnimation : MonoBehaviour
 {
@@ -12,18 +10,9 @@ public class VRPlayerAnimation : MonoBehaviour
 
     [Header("Audio")]
     public AudioSource audioSource;
-    public AudioClip walkingIndoors;
-    public AudioClip walkingOutdoors;
+    public AudioClip walkingClip;
 
-    [Header("Forest Ambience")]
-    public AudioSource forestAmbienceSource;
-    public AudioClip forestAmbience;
-
-    private bool isOutdoors;
     private bool wasWalking;
-    private bool lastOutdoorsState;
-    private Coroutine fadeRoutine;
-    private Coroutine ambienceFadeRoutine;
 
     void Start()
     {
@@ -33,14 +22,10 @@ public class VRPlayerAnimation : MonoBehaviour
         if (!playerAnim)
             playerAnim = GetComponent<Animator>();
 
-        audioSource.loop = true;
-        audioSource.volume = 1f;
-
-        if (forestAmbienceSource != null && forestAmbience != null)
+        if (audioSource != null && walkingClip != null)
         {
-            forestAmbienceSource.clip = forestAmbience;
-            forestAmbienceSource.loop = true;
-            forestAmbienceSource.volume = 0f;
+            audioSource.clip = walkingClip;
+            audioSource.loop = true;
         }
     }
 
@@ -56,16 +41,13 @@ public class VRPlayerAnimation : MonoBehaviour
             moveAction.action.Disable();
     }
 
-    void LateUpdate()
+    void Update()
     {
-        UpdateGroundType();
-        UpdateAmbience();
-
-        if (dialogueManager != null && 
+        if (dialogueManager != null &&
             (dialogueManager.isCutscene ||
-            dialogueManager.isMoving ||
-            dialogueManager.mainMenu.activeInHierarchy == true
-            || dialogueManager.basket.activeInHierarchy == false))
+             dialogueManager.isMoving ||
+             dialogueManager.mainMenu.activeInHierarchy ||
+             !dialogueManager.basket.activeInHierarchy))
         {
             StopWalking();
             return;
@@ -74,133 +56,27 @@ public class VRPlayerAnimation : MonoBehaviour
         Vector2 input = moveAction.action.ReadValue<Vector2>();
         bool isWalking = input.magnitude >= 0.1f;
 
-        playerAnim.SetBool("walk", isWalking);
-
         if (isWalking && !wasWalking)
             StartWalking();
         else if (!isWalking && wasWalking)
             StopWalking();
 
-        if (isWalking && isOutdoors != lastOutdoorsState)
-            StartWalking();
-
-        lastOutdoorsState = isOutdoors;
         wasWalking = isWalking;
-    }
-
-    void UpdateGroundType()
-    {
-        RaycastHit hit;
-        if (Physics.Raycast(transform.position, Vector3.down, out hit, 0.5f))
-        {
-            int hitLayer = hit.collider.gameObject.layer;
-
-            if (hitLayer == LayerMask.NameToLayer("Outdoors"))
-                isOutdoors = true;
-            else if (hitLayer == LayerMask.NameToLayer("Indoors"))
-                isOutdoors = false;
-        }
-    }
-
-    void UpdateAmbience()
-    {
-        if (forestAmbienceSource == null) return;
-
-        if (isOutdoors)
-        {
-            if (!forestAmbienceSource.isPlaying)
-            {
-                forestAmbienceSource.Play();
-                if (ambienceFadeRoutine != null)
-                    StopCoroutine(ambienceFadeRoutine);
-                ambienceFadeRoutine = StartCoroutine(FadeIn(forestAmbienceSource));
-            }
-        }
-        else
-        {
-            if (forestAmbienceSource.isPlaying)
-            {
-                if (ambienceFadeRoutine != null)
-                    StopCoroutine(ambienceFadeRoutine);
-                ambienceFadeRoutine = StartCoroutine(FadeOut(forestAmbienceSource));
-            }
-        }
     }
 
     void StartWalking()
     {
-        AudioClip targetClip = isOutdoors ? walkingOutdoors : walkingIndoors;
+        playerAnim.SetBool("walk", true);
 
-        if (fadeRoutine != null)
-            StopCoroutine(fadeRoutine);
-
-        if (audioSource.clip != targetClip)
-        {
-            fadeRoutine = StartCoroutine(CrossFade(targetClip));
-        }
-        else if (!audioSource.isPlaying)
-        {
-            fadeRoutine = StartCoroutine(FadeIn(audioSource));
-        }
+        if (audioSource != null && !audioSource.isPlaying)
+            audioSource.Play();
     }
 
     void StopWalking()
     {
         playerAnim.SetBool("walk", false);
 
-        if (fadeRoutine != null)
-            StopCoroutine(fadeRoutine);
-
-        fadeRoutine = StartCoroutine(FadeOut(audioSource));
-        wasWalking = false;
-    }
-
-    IEnumerator FadeIn(AudioSource source)
-    {
-        source.volume = 0f;
-        source.Play();
-
-        while (source.volume < 1f)
-        {
-            source.volume += Time.deltaTime / 0.25f;
-            yield return null;
-        }
-
-        source.volume = 1f;
-    }
-
-    IEnumerator FadeOut(AudioSource source)
-    {
-        float startVolume = source.volume;
-
-        while (source.volume > 0f)
-        {
-            source.volume -= Time.deltaTime / 0.25f;
-            yield return null;
-        }
-
-        source.Stop();
-        source.volume = startVolume;
-    }
-
-    IEnumerator CrossFade(AudioClip newClip)
-    {
-        while (audioSource.volume > 0f)
-        {
-            audioSource.volume -= Time.deltaTime / 0.25f;
-            yield return null;
-        }
-
-        audioSource.Stop();
-        audioSource.clip = newClip;
-        audioSource.Play();
-
-        while (audioSource.volume < 1f)
-        {
-            audioSource.volume += Time.deltaTime / 0.25f;
-            yield return null;
-        }
-
-        audioSource.volume = 1f;
+        if (audioSource != null && audioSource.isPlaying)
+            audioSource.Stop();
     }
 }

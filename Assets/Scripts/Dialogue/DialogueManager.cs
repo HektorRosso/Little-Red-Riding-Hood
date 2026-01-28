@@ -69,6 +69,11 @@ public class DialogueManager : MonoBehaviour
         lumberjackSource = lumberjack.GetComponentInChildren<AudioSource>();
         grandmotherSource = grandmother.GetComponentInChildren<AudioSource>();
 
+        wolfSource.loop = true;
+        disguisedWolfSource.loop = true;
+        lumberjackSource.loop = true;
+        grandmotherSource.loop = true;
+
         mainMenu.SetActive(true);
     }
 
@@ -91,6 +96,11 @@ public class DialogueManager : MonoBehaviour
         if (isGrandmotherMoving)
             isGrandmotherMoving = MoveTowardsWaypoint(grandmother, grandmotherWaypoints, ref grandmotherWaypointIndex, ref grandmotherAtWaypoint, ref isGrandmotherMoving, 1);
 
+        if (!isWolfWalking) StopMovementAudio(wolfSource);
+        if (!isWolfRunning) StopMovementAudio(disguisedWolfSource);
+        if (!isLumberjackWalking && !isLumberjackRunning) StopMovementAudio(lumberjackSource);
+        if (!isGrandmotherMoving) StopMovementAudio(grandmotherSource);
+
         wolfAnim.SetBool("wolfRun", isWolfRunning);
         wolfAnim.SetBool("wolfWalk", isWolfWalking);
         lumberjackAnim.SetBool("lumberjackRun", isLumberjackRunning);
@@ -105,11 +115,12 @@ public class DialogueManager : MonoBehaviour
         if (source == null || clip == null) return;
 
         if (source.clip != clip)
-        {
             source.clip = clip;
-            source.loop = true;
+
+        source.loop = true;
+
+        if (!source.isPlaying)
             source.Play();
-        }
     }
 
     private void StopMovementAudio(AudioSource source)

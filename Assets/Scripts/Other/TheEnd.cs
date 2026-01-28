@@ -7,11 +7,9 @@ public class TheEnd : MonoBehaviour
     private float scrollSpeed = 0.1f;
 
     private bool hasWaited;
-    private bool hasFadedIn;
     private bool hasFadedOut;
 
     public CanvasGroup canvasGroup;
-    public Transform player;
 
     public AudioSource audioSource;
     public AudioClip music;
@@ -19,7 +17,6 @@ public class TheEnd : MonoBehaviour
     void Start()
     {
         audioSource = GetComponent<AudioSource>();
-        hasFadedIn = true;
         StartCoroutine(FadeIn());
     }
 
@@ -60,7 +57,7 @@ public class TheEnd : MonoBehaviour
 
     void Scroll()
     {
-        if (transform.position.y < player.transform.position.y + 5.5f)
+        if (transform.position.y < 5.25f)
         {
             transform.position += Vector3.up * scrollSpeed * Time.deltaTime;
         }
@@ -75,7 +72,7 @@ public class TheEnd : MonoBehaviour
     {
         audioSource.PlayOneShot(music);
         yield return StartCoroutine(FadeCanvasGroup(1f, 1f));
-        yield return StartCoroutine(Wait(2f));
+        yield return StartCoroutine(Wait(3f));
     }
 
     IEnumerator FadeOut()

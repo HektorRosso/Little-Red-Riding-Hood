@@ -44,6 +44,11 @@ ModelImporter:
       assembly: UnityEngine.CoreModule
       name: Stove
     second: {fileID: 2100000, guid: f15814e216e0ac249b3ed4d89c1181d1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Walls
+    second: {fileID: 2100000, guid: da99ef8a0a793b342bce2f4c85e40b55, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

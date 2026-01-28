@@ -1,15 +1,18 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Cutscenes : MonoBehaviour
 {
     public DialogueManager dialogueManager;
     public TriggerCutscene triggerCutscene;
     public AudioSource audioSource;
-    private bool firstPickup;
 
     public GameObject basket;
     public GameObject wig;
+
+    public AudioClip closetKnock;
+    public AudioClip closetOpen;
 
     [Header("Mother")]
     public AudioClip mother1;
@@ -18,7 +21,6 @@ public class Cutscenes : MonoBehaviour
     public AudioClip mother4;
 
     [Header("Little Red Riding Hood")]
-    public AudioClip littleRedRidingHood1;
     public AudioClip littleRedRidingHood2;
     public AudioClip littleRedRidingHood3;
     public AudioClip littleRedRidingHood4;
@@ -291,6 +293,8 @@ public class Cutscenes : MonoBehaviour
 
         yield return Run(LumberjackRun());
 
+        yield return StartCoroutine(PlayVoiceline(closetKnock));
+
         yield return StartCoroutine(PlayVoiceline(grandmother1));
 
         triggerCutscene.disguisedWolfEndFirstMeetingPoint.SetActive(false);
@@ -304,16 +308,32 @@ public class Cutscenes : MonoBehaviour
         dialogueManager.isCutscene = false;
     }
 
-    public void FirstPickup()
+    public void End()
     {
-        if (firstPickup == false)
-        {
-            audioSource.PlayOneShot(littleRedRidingHood1);
-            firstPickup = true;
-        }
-        else
-        {
-            return;
-        }
+        Dialogue(closetOpen);
+        StartCoroutine(Ending());
+    }
+
+    IEnumerator Ending()
+    {
+        dialogueManager.isCutscene = true;
+
+        Animator anim = dialogueManager.grandmotherAnim;
+
+        yield return new WaitForSeconds(4.967f);
+
+        yield return StartCoroutine(Grandmother());
+
+        yield return StartCoroutine(Grandmother());
+
+        yield return StartCoroutine(Grandmother());
+
+        yield return StartCoroutine(PlayVoiceline(grandmother2));
+
+        yield return StartCoroutine(PlayVoiceline(littleRedRidingHood8));
+
+        yield return StartCoroutine(PlayVoiceline(grandmother3));
+
+        SceneManager.LoadScene("BasicScene");
     }
 }

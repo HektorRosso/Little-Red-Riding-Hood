@@ -715,6 +715,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 3472619355503967415}
+        m_TargetAssemblyTypeName: ObjectPickup, Assembly-CSharp
+        m_MethodName: FirstPickup
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_SelectExited:
     m_PersistentCalls:
       m_Calls: []
@@ -832,6 +844,7 @@ MonoBehaviour:
   audioSource: {fileID: 7331021641075137401}
   pickup: {fileID: 8300000, guid: d4a3020119e224d4fb405c268714045e, type: 3}
   putdown: {fileID: 0}
+  littleRedRidingHood1: {fileID: 8300000, guid: 308c8b2540e4af7448ff250ee34f0366, type: 3}
 --- !u!82 &7331021641075137401
 AudioSource:
   m_ObjectHideFlags: 0
