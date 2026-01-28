@@ -15613,6 +15613,10 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: e3164ba69c61ebc4ab1d2686dfe74e35, type: 2}
+    - target: {fileID: 6654170649860367458, guid: 0824c8f4bb43d2e4cb5b4e433dca4916, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7028595978246347120, guid: 0824c8f4bb43d2e4cb5b4e433dca4916, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
@@ -25481,7 +25485,7 @@ ReflectionProbe:
   m_Enabled: 1
   serializedVersion: 2
   m_Type: 0
-  m_Mode: 0
+  m_Mode: 2
   m_RefreshMode: 0
   m_TimeSlicingMode: 0
   m_Resolution: 128

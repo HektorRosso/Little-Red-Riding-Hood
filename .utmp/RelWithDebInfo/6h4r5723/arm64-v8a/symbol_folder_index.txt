@@ -1,0 +1,1 @@
+C:\Users\ivoro\OneDrive\Documents\GitHub\Little-Red-Riding-Hood\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\build\intermediates\cxx\RelWithDebInfo\6h4r5723\obj\arm64-v8a
