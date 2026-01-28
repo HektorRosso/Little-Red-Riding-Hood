@@ -33,7 +33,6 @@ public class TriggerCutscene : MonoBehaviour
         }
         else if (gameObject.name == "LumberjackStartFirstMeetingPoint")
         {
-            lumberjackStartFirstMeetingPoint.SetActive(false);
             lumberjackBorder1.SetActive(false);
             lumberjackBorder2.SetActive(false);
             cutscenes.Help();

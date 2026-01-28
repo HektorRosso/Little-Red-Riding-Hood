@@ -12,8 +12,28 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: Flower_Petals
+    second: {fileID: 2100000, guid: 50983eb55a67f0c44b40dd90c9304ec9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Flowerpot
+    second: {fileID: 2100000, guid: 7be6a2d6092e38e409364e0cc6da9ee5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: Logs
     second: {fileID: 2100000, guid: e3164ba69c61ebc4ab1d2686dfe74e35, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mug
+    second: {fileID: 2100000, guid: b06eb076b993a744388af6509d6a52c5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Pitcher
+    second: {fileID: 2100000, guid: 579b9570d14601c4fafce6910da3f3cc, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule

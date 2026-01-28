@@ -91,7 +91,7 @@ public class VRPlayerAnimation : MonoBehaviour
     void UpdateGroundType()
     {
         RaycastHit hit;
-        if (Physics.Raycast(transform.position, Vector3.up, out hit, 0.5f))
+        if (Physics.Raycast(transform.position, Vector3.down, out hit, 0.5f))
         {
             int hitLayer = hit.collider.gameObject.layer;
 

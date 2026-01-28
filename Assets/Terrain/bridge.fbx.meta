@@ -1,34 +1,9 @@
 fileFormatVersion: 2
-guid: 73fce8072b1d0a848a15dfcb8d75203c
+guid: e913256e591fca14f8dfe2782aaaf962
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: lambert4
-    second: {fileID: 2100000, guid: e3164ba69c61ebc4ab1d2686dfe74e35, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: pasted__Flowerpot
-    second: {fileID: 2100000, guid: 7be6a2d6092e38e409364e0cc6da9ee5, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: pasted__Flowerpot1
-    second: {fileID: 2100000, guid: 7be6a2d6092e38e409364e0cc6da9ee5, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: pasted__Mug
-    second: {fileID: 2100000, guid: 579b9570d14601c4fafce6910da3f3cc, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: pasted__lambert14
-    second: {fileID: 2100000, guid: e034200cf51f71746bfe2944fce64188, type: 2}
+  externalObjects: {}
   materials:
     materialImportMode: 2
     materialName: 0

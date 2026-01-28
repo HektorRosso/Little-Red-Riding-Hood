@@ -249,6 +249,8 @@ public class Cutscenes : MonoBehaviour
 
         yield return StartCoroutine(PlayVoiceline(littleRedRidingHood7));
 
+        triggerCutscene.lumberjackStartFirstMeetingPoint.SetActive(false);
+
         lumberjackanim.SetBool("lumberjackChopping", false);
         lumberjackanim.SetBool("lumberjackWalk", true);
 
@@ -290,6 +292,8 @@ public class Cutscenes : MonoBehaviour
         yield return Run(LumberjackRun());
 
         yield return StartCoroutine(PlayVoiceline(grandmother1));
+
+        triggerCutscene.disguisedWolfEndFirstMeetingPoint.SetActive(false);
 
         triggerCutscene.lumberjackEndFirstMeetingPoint.SetActive(true);
 
