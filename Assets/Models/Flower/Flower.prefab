@@ -791,6 +791,7 @@ MonoBehaviour:
   pickup: {fileID: 8300000, guid: d4a3020119e224d4fb405c268714045e, type: 3}
   putdown: {fileID: 0}
   littleRedRidingHood1: {fileID: 8300000, guid: 308c8b2540e4af7448ff250ee34f0366, type: 3}
+  menu: {fileID: 0}
 --- !u!82 &-4181174021863350146
 AudioSource:
   m_ObjectHideFlags: 0
