@@ -289,10 +289,6 @@ public class Cutscenes : MonoBehaviour
 
         yield return Run(LumberjackRun());
 
-        Running(Run(WolfRun()));
-
-        yield return Run(LumberjackRun());
-
         yield return StartCoroutine(PlayVoiceline(closetKnock));
 
         yield return StartCoroutine(PlayVoiceline(grandmother1));

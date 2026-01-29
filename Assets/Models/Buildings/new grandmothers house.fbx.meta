@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: f77cfb9cf09d7494d8dbf671e39d5d3b
+guid: 456ccc644e57cdc4dbc61f7e21042499
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
@@ -7,8 +7,38 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: openPBR_shader2
-    second: {fileID: -876546973899608171, guid: d02086079231d5e47b12a568e66bbf17, type: 3}
+      name: lambert4
+    second: {fileID: 2100000, guid: e3164ba69c61ebc4ab1d2686dfe74e35, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambert5
+    second: {fileID: 2100000, guid: e3164ba69c61ebc4ab1d2686dfe74e35, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: openPBR_shader1
+    second: {fileID: 2100000, guid: da99ef8a0a793b342bce2f4c85e40b55, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pasted__Flowerpot
+    second: {fileID: 2100000, guid: 7be6a2d6092e38e409364e0cc6da9ee5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pasted__Flowerpot1
+    second: {fileID: 2100000, guid: 7be6a2d6092e38e409364e0cc6da9ee5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pasted__Mug
+    second: {fileID: 2100000, guid: 579b9570d14601c4fafce6910da3f3cc, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pasted__lambert14
+    second: {fileID: 2100000, guid: e034200cf51f71746bfe2944fce64188, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
