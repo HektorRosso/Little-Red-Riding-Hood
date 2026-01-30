@@ -28,7 +28,7 @@ RenderSettings:
   m_SubtractiveShadowColor: {r: 0, g: 0, b: 0, a: 1}
   m_SkyboxMaterial: {fileID: 2100000, guid: fa95802f80bd745cfb5e9c89f7e22341, type: 2}
   m_HaloStrength: 0.5
-  m_FlareStrength: 1
+  m_FlareStrength: 0
   m_FlareFadeSpeed: 3
   m_HaloTexture: {fileID: 0}
   m_SpotCookie: {fileID: 10001, guid: 0000000000000000e000000000000000, type: 0}
@@ -28279,7 +28279,7 @@ ReflectionProbe:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1598269138}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 2
   m_Type: 0
   m_Mode: 2
@@ -32951,6 +32951,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 336524852}
     m_Modifications:
+    - target: {fileID: -649425869069754511, guid: 4593bb237474e644983a28f030fa02a4, type: 3}
+      propertyPath: m_Name
+      value: hands
+      objectReference: {fileID: 0}
+    - target: {fileID: 3521988790988306168, guid: 4593bb237474e644983a28f030fa02a4, type: 3}
+      propertyPath: m_Name
+      value: right
+      objectReference: {fileID: 0}
+    - target: {fileID: 6420615480965231656, guid: 4593bb237474e644983a28f030fa02a4, type: 3}
+      propertyPath: m_Name
+      value: left
+      objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a0a833233aa506b4ba7853ef73c5db97, type: 3}
       propertyPath: m_LocalScale.x
       value: 12.5
@@ -33010,18 +33022,6 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: a0a833233aa506b4ba7853ef73c5db97, type: 3}
       propertyPath: m_Name
       value: Lumberjack Chopping
-      objectReference: {fileID: 0}
-    - target: {fileID: -649425869069754511, guid: 4593bb237474e644983a28f030fa02a4, type: 3}
-      propertyPath: m_Name
-      value: hands
-      objectReference: {fileID: 0}
-    - target: {fileID: 3521988790988306168, guid: 4593bb237474e644983a28f030fa02a4, type: 3}
-      propertyPath: m_Name
-      value: right
-      objectReference: {fileID: 0}
-    - target: {fileID: 6420615480965231656, guid: 4593bb237474e644983a28f030fa02a4, type: 3}
-      propertyPath: m_Name
-      value: left
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
