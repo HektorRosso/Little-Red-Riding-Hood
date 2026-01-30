@@ -1,0 +1,10 @@
+# ninja log v5
+40	2198	7914726653844880	GameActivity/CMakeFiles/game.dir/UGAInputKeyEvent.cpp.o	79e39b01a5312c7d
+28	2219	7914726653870217	GameActivity/CMakeFiles/game.dir/UGAEntry.cpp.o	b598cc7fb0e838a
+19	2229	7914726654140509	GameActivity/CMakeFiles/game.dir/UGAConfiguration.cpp.o	6f16c6204e16c694
+79	2235	7914726654206053	GameActivity/CMakeFiles/game.dir/UGAInputMotionEvent.cpp.o	daed5c9fd4407419
+10	2312	7914726655020102	GameActivity/CMakeFiles/game.dir/UGADebug.cpp.o	eb542cfe429b4e8
+65	2419	7914726656107025	GameActivity/CMakeFiles/game.dir/UGASoftKeyboard.cpp.o	4010fabb98c8d90a
+52	2477	7914726656656170	GameActivity/CMakeFiles/game.dir/UGAInput.cpp.o	255b976460eb94aa
+1	2557	7914726657468185	GameActivity/CMakeFiles/game.dir/UGAApplication.cpp.o	2763eb3cfcec7c2e
+2558	2769	7914726659649420	C:/Users/IRoss2024/Documents/GitHub/Little-Red-Riding-Hood/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/2v5f123m/obj/arm64-v8a/libgame.so	bfd0d458221e4852

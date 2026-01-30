@@ -1,0 +1,2 @@
+C:\Users\IRoss2024\Documents\GitHub\Little-Red-Riding-Hood\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\src\main\cpp\CMakeLists.txt
+C:\Users\IRoss2024\Documents\GitHub\Little-Red-Riding-Hood\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\src\main\cpp\GameActivity\CMakeLists.txt
